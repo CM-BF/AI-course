@@ -247,16 +247,20 @@ def microF1(TP, FP, TN, FN):
         FP_total += FP[key]
         TN_total += TN[key]
         FN_total += FN[key]
+    print(TP_total, FP_total, TN_total, FN_total)
     if TP_total + FP_total == 0:
         P = 1
+        print('here1')
     else:
         P = float(TP_total) / (TP_total + FP_total)
     if TP_total + FN_total == 0:
         R = 1
+        print('here2')
     else:
         R = float(TP_total) / (TP_total + FN_total)
     if P + R == 0:
         F1 = 2 * P * R
+        print('here3')
     else:
         F1 = (2 * P * R) / (P + R)
     return F1
@@ -312,7 +316,7 @@ def createTree():
                     FN[key] += 1
                 else:
                     TN[key] += 1
-
+        print(ypred, sample['class'], ':', )
         total_items += 1
         if total_items % 100 == 0:
             accuracy = float(acc_items) / total_items
