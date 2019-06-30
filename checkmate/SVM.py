@@ -200,9 +200,9 @@ def calculateb(SVMclass, a):
 def calculatef(SVMclass, a, b, x):
     a_np = np.array(a)
     if sigma == 0:
-        f = np.sum(a_np * yr[SVMclass][0] * np.sum(Kl[0] * Kr[0], axis=1)) + b
+        f = np.sum(a_np * yr[SVMclass][0] * np.sum(x * Kr[0], axis=1)) + b
     else:
-        f = np.sum(a_np * yr[SVMclass][0] * np.exp(- (np.sum(np.square(Kl[0] - Kr[0]), axis=1)) / sigma ** 2)) + b
+        f = np.sum(a_np * yr[SVMclass][0] * np.exp(- (np.sum(np.square(x - Kr[0]), axis=1)) / sigma ** 2)) + b
     return f
 
 def multiclassSVM():
@@ -226,8 +226,8 @@ def multiclassSVM():
     # 开始测试
     next(data.data['test'])
     for item in data.data['test']:
-        # sample = data.transformer(item)
-        sample = data.coord[300]
+        sample = data.transformer(item)
+        # sample = data.coord[300]
         # 计算多种分类的得分f
         f = {}
         for SVMclass in TP.keys():
