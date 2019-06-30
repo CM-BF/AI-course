@@ -3,10 +3,11 @@ from scipy import sparse
 import csv
 import numpy as np
 import copy
+import time
 
 sigma = 2
-C = 2
-gap = 4
+C = 10
+gap = 64
 
 class Data(object):
 
@@ -19,9 +20,17 @@ class Data(object):
         for item in self.data['train']:
             self.coord.append(self.transformer(item))
 
+        # 取其中部分数据
+        tmpcoord = []
+        for i in range(0, len(self.coord), gap):
+            tmpcoord.append(self.coord[i])
+        self.coord = tmpcoord
+
         self.x = []
         for item in self.coord:
             self.x.append(self.toArray(item))
+
+        # 计算核矩阵
 
 
     def transformer(self, item):
@@ -77,17 +86,14 @@ def microF1(TP, FP, TN, FN):
     print(TP_total, FP_total, TN_total, FN_total)
     if TP_total + FP_total == 0:
         P = 1
-        print('here1')
     else:
         P = float(TP_total) / (TP_total + FP_total)
     if TP_total + FN_total == 0:
         R = 1
-        print('here2')
     else:
         R = float(TP_total) / (TP_total + FN_total)
     if P + R == 0:
         F1 = 2 * P * R
-        print('here3')
     else:
         F1 = (2 * P * R) / (P + R)
     return F1
@@ -99,26 +105,67 @@ def kernel(xi, xj, sigma):
     else:
         return np.exp(- (np.linalg.norm(xi - xj) ** 2) / (sigma ** 2))
 
-def softSVM(data, SVMclass, sigma, C):
+
+data = Data()
+length = len(data.coord)
+Kl = np.zeros((length, length, 6))
+Kr = np.zeros((length, length, 6))
+for i in range(len(data.coord)):
+    Kl[i, :] = np.array(data.x[i])
+for i in range(len(data.coord)):
+    Kr[:, i] = np.array(data.x[i])
+yl = {}
+yr = {}
+
+
+
+
+def softSVM(SVMclass, sigma, C):
 
     # 计算出P
-    length = len(data.coord) // gap + 1
-    P = sparse.lil_matrix((length, length))
-    for i in range(0, len(data.coord), gap):
-        for j in range(0, len(data.coord), gap):
-            mul = 1
-            xi = data.x[i]
-            xj = data.x[j]
-            mul *= kernel(xi, xj, sigma)
-            if SVMclass == data.coord[i]['class']:
-                mul *= 1
-            else:
-                mul *= -1
-            if SVMclass == data.coord[j]['class']:
-                mul *= 1
-            else:
-                mul *= -1
-            P[i // gap, j // gap] = mul
+    P = np.zeros((length, length))
+
+    yl[SVMclass] = np.zeros((length, length))
+    yr[SVMclass] = np.zeros((length, length))
+    for i in range(len(data.coord)):
+        if SVMclass == data.coord[i]['class']:
+            yl[SVMclass][i] = 1
+        else:
+            yl[SVMclass][i] = -1
+    for i in range(len(data.coord)):
+        if SVMclass == data.coord[i]['class']:
+            yr[SVMclass][:, i] = 1
+        else:
+            yr[SVMclass][:, i] = -1
+
+    if sigma == 0:
+        P = yl[SVMclass] * yr[SVMclass] * np.sum(Kl * Kr, axis=2)
+    else:
+        P = yl[SVMclass] * yr[SVMclass] * np.exp(- (np.sum(np.square(Kl - Kr), axis=2)) / sigma ** 2)
+
+    # for i in range(len(data.coord)):
+    #     print(i)
+    #     for j in range(len(data.coord)):
+    #         start = time.clock()
+    #         mul = 1
+    #         xi = data.x[i]
+    #         xj = data.x[j]
+    #         time1 = time.clock()
+    #         mul *= kernel(xi, xj, sigma)
+    #         time2 = time.clock()
+    #         if SVMclass == data.coord[i]['class']:
+    #             mul *= 1
+    #         else:
+    #             mul *= -1
+    #         if SVMclass == data.coord[j]['class']:
+    #             mul *= 1
+    #         else:
+    #             mul *= -1
+    #         time3 = time.clock()
+    #         P[i, j] = mul
+    #         time4 = time.clock()
+    #         # print(time1 - start, time2 - time1, time3 - time2, time4 - time3)
+    print('transfer')
     P = sparse.csc_matrix(P)
     # 计算 q
     q = - np.ones((length))
@@ -129,12 +176,8 @@ def softSVM(data, SVMclass, sigma, C):
     u[-1] = 0
 
     A = np.identity((length + 1))
-    for i in range(0, len(data.coord), gap):
-        if SVMclass == data.coord[i]['class']:
-            A[-1, i // gap] = 1
-        else:
-            A[-1, i // gap] = -1
     A = np.delete(A, -1, axis=1)
+    A[-1] = yr[SVMclass][-1]
     A = sparse.csc_matrix(A)
 
     m = osqp.OSQP()
@@ -145,38 +188,24 @@ def softSVM(data, SVMclass, sigma, C):
 
     return result
 
-def calculateb(data, SVMclass, a):
-    b = 0
-    if SVMclass == data.coord[0]['class']:
-        b = 1
+def calculateb(SVMclass, a):
+    b = yr[SVMclass][0, 0]
+    a_np = np.array(a)
+    if sigma == 0:
+        b -= np.sum(a_np * yr[SVMclass][0] * np.sum(Kl[0] * Kr[0], axis=1))
     else:
-        b = -1
-
-    for i in range(0, len(data.coord), gap):
-        xi = data.x[i]
-        yi = 1
-        if SVMclass == data.coord[i]['class']:
-            yi = 1
-        else:
-            yi = -1
-        b -= a[i // gap] * yi * kernel(xi, data.x[0], sigma)
-
+        b -= np.sum(a_np * yr[SVMclass][0] * np.exp(- (np.sum(np.square(Kl[0] - Kr[0]), axis=1)) / sigma ** 2))
     return b
 
-def calculatef(data, SVMclass, a, b, x):
-    f = 0
-    for i in range(0, len(data.coord), gap):
-        xi = data.x[i]
-        yi = 1
-        if SVMclass == data.coord[i]['class']:
-            yi = 1
-        else:
-            yi = -1
-        f += a[i // gap] * yi * kernel(xi, x, sigma)
-    f += b
+def calculatef(SVMclass, a, b, x):
+    a_np = np.array(a)
+    if sigma == 0:
+        f = np.sum(a_np * yr[SVMclass][0] * np.sum(Kl[0] * Kr[0], axis=1)) + b
+    else:
+        f = np.sum(a_np * yr[SVMclass][0] * np.exp(- (np.sum(np.square(Kl[0] - Kr[0]), axis=1)) / sigma ** 2)) + b
     return f
 
-def multiclassSVM(data):
+def multiclassSVM():
     acc_items = 0
     total_items = 0
     TP = {'draw': 0, 'zero': 0, 'one': 0, 'two': 0, 'three': 0, 'four': 0, 'five': 0, 'six': 0, 'seven': 0, 'eight': 0,
@@ -190,21 +219,21 @@ def multiclassSVM(data):
     result = {}
     print('Begin train')
     for SVMclass in TP.keys():
-        result[SVMclass] = softSVM(data, SVMclass, sigma, C)
+        result[SVMclass] = softSVM(SVMclass, sigma, C)
         print('finished SVM: SVM' + SVMclass)
 
     print('Begin test')
     # 开始测试
     next(data.data['test'])
     for item in data.data['test']:
-        sample = data.transformer(item)
-
+        # sample = data.transformer(item)
+        sample = data.coord[300]
         # 计算多种分类的得分f
         f = {}
         for SVMclass in TP.keys():
             a = result[SVMclass].x
-            b = calculateb(data, SVMclass, a)
-            f[SVMclass] = calculatef(data, SVMclass, a, b, data.toArray(sample))
+            b = calculateb(SVMclass, a)
+            f[SVMclass] = calculatef(SVMclass, a, b, data.toArray(sample))
 
         # 计算预测值 ypred
         ypred = None
@@ -250,8 +279,7 @@ def multiclassSVM(data):
 
 
 if __name__ == '__main__':
-    data = Data()
-    multiclassSVM(data)
+    multiclassSVM()
 
 
 
