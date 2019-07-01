@@ -17,8 +17,8 @@ class Node(object):
 class Data(object):
 
     def __init__(self):
-        self.data = {'train': csv.reader(open('dataset/trainset.csv', 'r')),
-                     'test': csv.reader(open('dataset/testset.csv', 'r'))}
+        self.data = {'train': csv.reader(open('../dataset/trainset.csv', 'r')),
+                     'test': csv.reader(open('../dataset/testset.csv', 'r'))}
         self.coord = []
         next(self.data['train'])
         for item in self.data['train']:
