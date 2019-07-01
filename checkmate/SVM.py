@@ -6,8 +6,8 @@ import copy
 import time
 
 sigma = 2
-C = 10
-gap = 64
+C = 2
+gap = 4
 
 class Data(object):
 

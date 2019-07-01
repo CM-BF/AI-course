@@ -1,0 +1,2972 @@
+Begin train
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -2.2629e+03   1.20e+01   6.00e-01   1.00e-01   4.55e+01s
+ 200  -6.2116e+02   2.18e-02   4.68e-04   1.00e-01   5.66e+01s
+ 400  -5.7398e+02   2.43e-03   6.98e-03   1.38e+00   9.10e+01s
+ 425  -5.7171e+02   1.29e-03   3.84e-03   1.38e+00   9.24e+01s
+
+status:               solved
+number of iterations: 425
+optimal objective:    -571.7053
+run time:             9.24e+01s
+optimal rho estimate: 1.14e+00
+
+finished SVM: SVMdraw
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -7.6059e+01   1.21e+01   6.00e-01   1.00e-01   4.77e+01s
+ 175  -2.0687e+01   2.75e-03   1.55e-05   1.00e-01   5.75e+01s
+
+status:               solved
+number of iterations: 175
+optimal objective:    -20.6871
+run time:             5.75e+01s
+optimal rho estimate: 9.50e-01
+
+finished SVM: SVMzero
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -2.1719e+02   1.50e+01   6.00e-01   1.00e-01   4.59e+01s
+ 200  -5.2235e+01   3.22e-03   1.60e-05   1.00e-01   5.69e+01s
+ 225  -5.2210e+01   2.78e-03   1.34e-05   1.00e-01   5.83e+01s
+
+status:               solved
+number of iterations: 225
+optimal objective:    -52.2096
+run time:             5.83e+01s
+optimal rho estimate: 1.12e+00
+
+finished SVM: SVMone
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -3.3113e+02   1.29e+01   6.00e-01   1.00e-01   4.64e+01s
+ 200  -1.1427e+02   4.58e-03   4.23e-05   1.00e-01   5.75e+01s
+ 300  -1.1394e+02   2.76e-03   2.03e-05   1.00e-01   6.30e+01s
+
+status:               solved
+number of iterations: 300
+optimal objective:    -113.9377
+run time:             6.30e+01s
+optimal rho estimate: 1.40e+00
+
+finished SVM: SVMtwo
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -2.3296e+02   1.72e+01   6.00e-01   1.00e-01   4.56e+01s
+ 200  -5.4878e+01   4.05e-03   1.68e-05   1.00e-01   5.66e+01s
+ 250  -5.4826e+01   2.89e-03   1.13e-05   1.00e-01   5.94e+01s
+
+status:               solved
+number of iterations: 250
+optimal objective:    -54.8262
+run time:             5.94e+01s
+optimal rho estimate: 1.17e+00
+
+finished SVM: SVMthree
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -4.4509e+02   1.60e+01   6.00e-01   1.00e-01   4.62e+01s
+ 200  -1.1467e+02   5.05e-03   2.59e-05   1.00e-01   5.74e+01s
+ 300  -1.1447e+02   2.97e-03   1.53e-05   1.00e-01   6.30e+01s
+
+status:               solved
+number of iterations: 300
+optimal objective:    -114.4735
+run time:             6.30e+01s
+optimal rho estimate: 1.52e+00
+
+finished SVM: SVMfour
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -1.2177e+03   1.79e+01   6.00e-01   1.00e-01   4.56e+01s
+ 200  -3.0626e+02   8.29e-03   5.50e-05   1.00e-01   5.66e+01s
+ 400  -3.0500e+02   3.74e-03   2.03e-05   1.00e-01   6.77e+01s
+ 500  -3.0468e+02   2.88e-03   1.16e-05   1.00e-01   7.32e+01s
+
+status:               solved
+number of iterations: 500
+optimal objective:    -304.6787
+run time:             7.32e+01s
+optimal rho estimate: 1.83e+00
+
+finished SVM: SVMfive
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -1.4431e+03   1.82e+01   6.00e-01   1.00e-01   4.60e+01s
+ 200  -3.4961e+02   1.17e-02   1.18e-04   1.00e-01   5.72e+01s
+ 400  -3.4736e+02   4.68e-03   4.02e-05   1.00e-01   6.82e+01s
+ 600  -3.4642e+02   2.98e-03   1.83e-05   1.00e-01   7.93e+01s
+
+status:               solved
+number of iterations: 600
+optimal objective:    -346.4205
+run time:             7.93e+01s
+optimal rho estimate: 1.39e+00
+
+finished SVM: SVMsix
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -2.0154e+03   1.77e+01   6.00e-01   1.00e-01   4.57e+01s
+ 200  -4.5541e+02   1.18e-02   6.56e-05   1.00e-01   5.68e+01s
+ 400  -4.5265e+02   5.69e-03   1.89e-05   1.00e-01   6.78e+01s
+ 600  -4.5145e+02   3.47e-03   1.05e-05   1.00e-01   7.89e+01s
+ 675  -4.4995e+02   1.30e-03   1.72e-03   1.94e+00   8.84e+01s
+
+status:               solved
+number of iterations: 675
+optimal objective:    -449.9504
+run time:             8.84e+01s
+optimal rho estimate: 1.79e+00
+
+finished SVM: SVMseven
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -3.5709e+03   1.88e+01   6.00e-01   1.00e-01   4.54e+01s
+ 200  -8.5928e+02   1.51e-02   9.65e-05   1.00e-01   5.63e+01s
+ 400  -8.5528e+02   6.88e-03   3.66e-05   1.00e-01   6.74e+01s
+ 600  -8.5364e+02   4.01e-03   1.96e-05   1.00e-01   7.85e+01s
+ 675  -8.5191e+02   1.26e-03   2.27e-03   1.77e+00   8.81e+01s
+
+status:               solved
+number of iterations: 675
+optimal objective:    -851.9056
+run time:             8.81e+01s
+optimal rho estimate: 1.64e+00
+
+finished SVM: SVMeight
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -4.4588e+03   1.90e+01   6.00e-01   1.00e-01   4.52e+01s
+ 200  -1.0677e+03   1.27e-02   7.65e-05   1.00e-01   5.62e+01s
+ 350  -1.0620e+03   2.96e-03   1.78e-03   1.61e+00   8.78e+01s
+
+status:               solved
+number of iterations: 350
+optimal objective:    -1062.0404
+run time:             8.78e+01s
+optimal rho estimate: 2.32e+00
+
+finished SVM: SVMnine
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -5.7038e+03   1.87e+01   6.00e-01   1.00e-01   4.56e+01s
+ 200  -1.2962e+03   1.72e-02   1.09e-04   1.00e-01   5.66e+01s
+ 400  -1.2908e+03   6.58e-03   2.87e-05   1.00e-01   6.77e+01s
+ 575  -1.2892e+03   2.78e-03   1.19e-05   1.00e-01   7.74e+01s
+
+status:               solved
+number of iterations: 575
+optimal objective:    -1289.2369
+run time:             7.74e+01s
+optimal rho estimate: 1.84e+00
+
+finished SVM: SVMten
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -7.9827e+03   2.08e+01   6.00e-01   1.00e-01   4.55e+01s
+ 200  -1.8037e+03   3.20e-02   1.76e-04   1.00e-01   5.65e+01s
+ 400  -1.7960e+03   7.84e-03   3.65e-05   1.00e-01   6.76e+01s
+ 550  -1.7945e+03   2.90e-03   1.40e-05   1.00e-01   7.59e+01s
+
+status:               solved
+number of iterations: 550
+optimal objective:    -1794.4503
+run time:             7.59e+01s
+optimal rho estimate: 1.80e+00
+
+finished SVM: SVMeleven
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -9.6857e+03   1.88e+01   6.00e-01   1.00e-01   4.53e+01s
+ 200  -2.2309e+03   2.08e-02   9.92e-05   1.00e-01   5.62e+01s
+ 350  -2.2253e+03   6.54e-05   9.96e-04   1.65e+00   8.78e+01s
+
+status:               solved
+number of iterations: 350
+optimal objective:    -2225.2954
+run time:             8.78e+01s
+optimal rho estimate: 5.10e-01
+
+finished SVM: SVMtwelve
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -1.1083e+04   2.25e+01   6.00e-01   1.00e-01   4.57e+01s
+ 200  -2.5465e+03   1.37e-02   9.45e-05   1.00e-01   5.66e+01s
+ 400  -2.5432e+03   3.13e-03   1.81e-05   1.00e-01   6.75e+01s
+ 425  -2.5431e+03   2.59e-03   1.47e-05   1.00e-01   6.89e+01s
+
+status:               solved
+number of iterations: 425
+optimal objective:    -2543.1307
+run time:             6.89e+01s
+optimal rho estimate: 1.76e+00
+
+finished SVM: SVMthirteen
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -9.6544e+03   2.15e+01   6.00e-01   1.00e-01   4.51e+01s
+ 200  -2.3409e+03   1.68e-02   1.01e-04   1.00e-01   5.60e+01s
+ 400  -2.3339e+03   4.58e-03   2.42e-05   1.00e-01   6.70e+01s
+ 475  -2.3330e+03   2.94e-03   1.51e-05   1.00e-01   7.11e+01s
+
+status:               solved
+number of iterations: 475
+optimal objective:    -2333.0043
+run time:             7.11e+01s
+optimal rho estimate: 1.87e+00
+
+finished SVM: SVMfourteen
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -5.0088e+03   2.47e+01   6.00e-01   1.00e-01   4.54e+01s
+ 200  -1.1077e+03   1.63e-02   1.77e-04   1.00e-01   5.64e+01s
+ 375  -1.0900e+03   1.13e-03   3.30e-03   1.53e+00   8.94e+01s
+
+status:               solved
+number of iterations: 375
+optimal objective:    -1089.9798
+run time:             8.94e+01s
+optimal rho estimate: 1.36e+00
+
+finished SVM: SVMfifteen
+transfer
+-----------------------------------------------------------------
+           OSQP v0.5.0  -  Operator Splitting QP Solver
+              (c) Bartolomeo Stellato,  Goran Banjac
+        University of Oxford  -  Stanford University 2018
+-----------------------------------------------------------------
+problem:  variables n = 5612, constraints m = 5613
+          nnz(P) + nnz(A) = 15761302
+settings: linear system solver = qdldl,
+          eps_abs = 1.0e-03, eps_rel = 1.0e-03,
+          eps_prim_inf = 1.0e-04, eps_dual_inf = 1.0e-04,
+          rho = 1.00e-01 (adaptive),
+          sigma = 1.00e-06, alpha = 1.60, max_iter = 4000
+          check_termination: on (interval 25),
+          scaling: on, scaled_termination: off
+          warm start: on, polish: off
+
+begin solve
+objective    pri res    dua res    rho        time
+   1  -1.0333e+03   1.65e+01   6.00e-01   1.00e-01   4.53e+01s
+ 200  -2.2754e+02   8.57e-03   7.83e-05   1.00e-01   5.63e+01s
+ 400  -2.2583e+02   4.10e-03   3.36e-05   1.00e-01   6.73e+01s
+ 575  -2.2511e+02   2.95e-03   2.53e-05   1.00e-01   7.69e+01s
+
+status:               solved
+number of iterations: 575
+optimal objective:    -225.1132
+run time:             7.69e+01s
+optimal rho estimate: 1.35e+00
+
+finished SVM: SVMsixteen
+Begin test
+4 fifteen draw
+11 nine draw
+19 thirteen draw
+27 fifteen draw
+53 fifteen draw
+57 fifteen draw
+65 thirteen draw
+67 fifteen draw
+70 nine draw
+82 fifteen draw
+94 fifteen draw
+89 11 1689 11
+total: 100 Accuracy: 0.89 Macro F1: 0.8300999412110524 Micro F1: 0.89
+131 fifteen draw
+173 two draw
+187 13 3387 13
+total: 200 Accuracy: 0.935 Macro F1: 0.775911570485214 Micro F1: 0.935
+216 fourteen draw
+232 fourteen draw
+292 twelve draw
+284 16 5084 16
+total: 300 Accuracy: 0.9466666666666667 Macro F1: 0.665144596651446 Micro F1: 0.9466666666666667
+333 fifteen draw
+348 fourteen draw
+395 thirteen draw
+381 19 6781 19
+total: 400 Accuracy: 0.9525 Macro F1: 0.6653151230616019 Micro F1: 0.9525
+452 twelve draw
+465 nine draw
+467 twelve draw
+471 twelve draw
+480 nine draw
+476 24 8476 24
+total: 500 Accuracy: 0.952 Macro F1: 0.6653005464480874 Micro F1: 0.952
+532 eight draw
+560 seven eight
+561 seven eight
+562 nine eight
+563 ten eight
+566 fifteen eight
+568 eleven eight
+569 fifteen eight
+570 fifteen eight
+571 fifteen eight
+572 seven eight
+573 nine eight
+574 seven eight
+577 eleven eight
+580 fourteen eight
+581 twelve eight
+582 seven eight
+585 fourteen eight
+586 ten eight
+587 seven eight
+588 fourteen eight
+589 nine eight
+591 nine eight
+593 five eight
+595 nine eight
+596 nine eight
+597 twelve eight
+599 nine eight
+600 six eight
+547 53 10147 53
+total: 600 Accuracy: 0.9116666666666666 Macro F1: 0.35832524698032475 Micro F1: 0.9116666666666666
+604 nine eight
+605 ten eight
+606 nine eight
+607 ten eight
+611 seven eight
+612 nine eight
+616 ten eight
+617 nine eight
+618 seven eight
+620 nine eight
+621 nine eight
+622 ten eight
+623 twelve eight
+624 twelve eight
+625 twelve eight
+626 nine eight
+627 nine eight
+629 nine eight
+630 seven eight
+632 nine eight
+633 nine eight
+634 nine eight
+635 nine eight
+636 twelve eight
+639 nine eight
+640 nine eight
+641 nine eight
+642 nine eight
+643 nine eight
+646 ten eight
+649 nine eight
+650 nine eight
+652 two eight
+654 nine eight
+655 seven eight
+656 eleven eight
+657 thirteen eight
+658 twelve eight
+659 nine eight
+660 nine eight
+663 seven eight
+664 seven eight
+665 fourteen eight
+666 thirteen eight
+667 five eight
+668 draw eight
+669 six eight
+672 five eight
+673 twelve eight
+674 twelve eight
+676 eleven eight
+678 eleven eight
+680 six eight
+685 six eight
+687 fifteen eight
+688 eleven eight
+692 twelve eight
+693 nine eight
+700 ten eight
+588 112 11788 112
+total: 700 Accuracy: 0.84 Macro F1: 0.36262524510108735 Micro F1: 0.8399999999999999
+701 seven eight
+705 nine eight
+709 ten eight
+711 nine eight
+715 six eight
+718 ten eight
+719 nine eight
+725 nine eight
+727 nine eight
+730 nine eight
+731 nine eight
+735 nine eight
+737 seven eight
+738 five eight
+739 five eight
+744 seven eight
+745 ten eight
+747 seven eight
+748 twelve eight
+750 ten eight
+753 twelve eight
+758 nine eight
+763 nine eight
+766 nine eight
+768 nine eight
+771 nine eight
+772 nine eight
+773 nine eight
+774 nine eight
+780 ten eight
+781 five eight
+782 six eight
+783 nine eight
+784 nine eight
+785 five eight
+786 five eight
+787 nine eight
+790 five eight
+794 nine eight
+799 nine eight
+800 nine eight
+647 153 13447 153
+total: 800 Accuracy: 0.80875 Macro F1: 0.36738076233145367 Micro F1: 0.8087499999999999
+801 five eight
+803 nine eight
+805 nine eight
+807 five eight
+808 seven eight
+809 nine eight
+811 nine eight
+817 seven eight
+820 nine eight
+821 five eight
+823 ten eight
+824 seven eight
+825 ten eight
+826 nine eight
+827 ten eight
+829 nine eight
+838 draw eight
+841 nine eight
+846 nine eight
+847 nine eleven
+848 nine eleven
+850 nine eleven
+853 ten eleven
+855 fifteen eleven
+857 thirteen eleven
+858 ten eleven
+859 twelve eleven
+860 twelve eleven
+861 thirteen eleven
+862 fifteen eleven
+863 ten eleven
+864 thirteen eleven
+865 thirteen eleven
+866 fifteen eleven
+869 fourteen eleven
+870 fifteen eleven
+872 eight eleven
+874 thirteen eleven
+878 ten eleven
+879 fifteen eleven
+880 twelve eleven
+881 twelve eleven
+883 fifteen eleven
+884 fourteen eleven
+886 fifteen eleven
+888 twelve eleven
+889 nine eleven
+890 thirteen eleven
+891 thirteen eleven
+892 fifteen eleven
+893 fifteen eleven
+895 thirteen eleven
+896 nine eleven
+897 nine eleven
+898 nine eleven
+899 twelve eleven
+900 twelve eleven
+690 210 15090 210
+total: 900 Accuracy: 0.7666666666666667 Macro F1: 0.39161531944516803 Micro F1: 0.7666666666666667
+901 twelve eleven
+902 fourteen eleven
+903 twelve eleven
+904 twelve eleven
+905 nine eleven
+906 twelve eleven
+908 twelve eleven
+909 twelve eleven
+912 thirteen eleven
+914 twelve eleven
+917 twelve eleven
+918 ten eleven
+921 twelve eleven
+922 fourteen eleven
+925 twelve eleven
+929 nine eleven
+930 fourteen eleven
+931 thirteen eleven
+932 thirteen eleven
+933 nine eleven
+934 fourteen eleven
+935 fourteen eleven
+936 fourteen eleven
+937 twelve eleven
+940 twelve eleven
+943 twelve eleven
+944 nine eleven
+945 twelve eleven
+946 ten eleven
+948 thirteen eleven
+949 fourteen eleven
+950 ten eleven
+954 fifteen eleven
+955 fifteen eleven
+957 fourteen eleven
+958 twelve eleven
+959 twelve eleven
+960 twelve eleven
+961 ten eleven
+962 ten eleven
+963 twelve eleven
+964 twelve eleven
+966 twelve eleven
+967 twelve eleven
+968 fourteen eleven
+969 twelve eleven
+970 nine eleven
+971 nine eleven
+975 fifteen eleven
+977 ten eleven
+978 ten eleven
+979 twelve eleven
+980 fifteen eleven
+982 fifteen eleven
+983 twelve eleven
+984 fourteen eleven
+985 ten eleven
+986 twelve eleven
+987 fourteen eleven
+988 fourteen eleven
+989 twelve eleven
+990 fourteen eleven
+991 thirteen eleven
+993 fourteen eleven
+994 twelve eleven
+995 ten eleven
+997 ten eleven
+998 thirteen eleven
+722 278 16722 278
+total: 1000 Accuracy: 0.722 Macro F1: 0.3938645322206966 Micro F1: 0.722
+1002 twelve eleven
+1003 thirteen eleven
+1004 twelve eleven
+1005 thirteen eleven
+1006 nine eleven
+1007 nine eleven
+1008 eight eleven
+1009 fourteen eleven
+1010 twelve eleven
+1011 twelve eleven
+1012 twelve eleven
+1013 ten eleven
+1014 ten eleven
+1015 twelve eleven
+1016 nine eleven
+1017 nine eleven
+1018 ten eleven
+1019 thirteen eleven
+1021 twelve eleven
+1026 twelve eleven
+1027 twelve eleven
+1028 twelve eleven
+1029 twelve eleven
+1031 twelve eleven
+1032 twelve eleven
+1034 nine eleven
+1035 twelve eleven
+1037 ten eleven
+1039 thirteen eleven
+1040 twelve eleven
+1044 twelve eleven
+1045 ten eleven
+1046 nine eleven
+1050 thirteen eleven
+1054 thirteen eleven
+1056 nine eleven
+1057 twelve eleven
+1058 nine eleven
+1059 twelve eleven
+1060 fourteen eleven
+1065 nine eleven
+1066 twelve eleven
+1067 twelve eleven
+1068 thirteen eleven
+1070 twelve eleven
+1071 nine eleven
+1074 twelve eleven
+1076 twelve eleven
+1077 twelve eleven
+1079 ten eleven
+1080 twelve eleven
+1082 twelve eleven
+1083 twelve eleven
+1084 ten eleven
+1085 thirteen eleven
+1086 twelve eleven
+1088 twelve eleven
+1089 twelve eleven
+1090 twelve eleven
+1092 twelve eleven
+1094 twelve eleven
+1098 nine eleven
+1099 twelve eleven
+759 341 18359 341
+total: 1100 Accuracy: 0.69 Macro F1: 0.39551438220219476 Micro F1: 0.69
+1101 nine eleven
+1102 twelve eleven
+1106 eight eleven
+1107 ten eleven
+1108 nine eleven
+1110 thirteen eleven
+1114 twelve eleven
+1115 nine eleven
+1117 thirteen eleven
+1118 fourteen eleven
+1119 fifteen eleven
+1120 fifteen eleven
+1121 twelve eleven
+1122 nine eleven
+1123 twelve eleven
+1124 ten eleven
+1126 twelve eleven
+1127 twelve eleven
+1128 fifteen eleven
+1129 fifteen eleven
+1130 nine eleven
+1131 thirteen eleven
+1134 fourteen eleven
+1135 ten eleven
+1136 ten eleven
+1137 fifteen eleven
+1138 nine eleven
+1139 four eleven
+1141 thirteen eleven
+1142 thirteen eleven
+1143 thirteen eleven
+1145 five eleven
+1146 six eleven
+1148 ten eleven
+1149 fifteen eleven
+1151 fifteen eleven
+1155 nine eleven
+1157 fifteen eleven
+1162 thirteen eleven
+1165 five eleven
+1166 five eleven
+1168 thirteen eleven
+1170 twelve eleven
+1171 ten eleven
+1172 thirteen eleven
+1173 twelve eleven
+1174 twelve eleven
+1176 twelve eleven
+1177 twelve eleven
+1178 twelve eleven
+1179 thirteen eleven
+1181 thirteen eleven
+1182 twelve eleven
+1183 thirteen eleven
+1184 thirteen eleven
+1186 twelve eleven
+1189 thirteen eleven
+1190 thirteen eleven
+1192 twelve eleven
+1194 ten eleven
+1195 ten eleven
+1196 twelve eleven
+1197 thirteen eleven
+796 404 19996 404
+total: 1200 Accuracy: 0.6633333333333333 Macro F1: 0.3406232502389577 Micro F1: 0.6633333333333333
+1201 twelve eleven
+1202 twelve eleven
+1203 twelve eleven
+1204 ten eleven
+1205 twelve eleven
+1206 twelve eleven
+1207 nine eleven
+1208 fourteen eleven
+1209 ten eleven
+1210 twelve eleven
+1211 twelve eleven
+1213 twelve eleven
+1214 twelve eleven
+1216 twelve eleven
+1217 twelve eleven
+1219 twelve eleven
+1220 twelve eleven
+1221 twelve eleven
+1225 thirteen eleven
+1226 twelve eleven
+1227 twelve eleven
+1230 thirteen eleven
+1232 twelve eleven
+1233 twelve eleven
+1234 thirteen eleven
+1237 thirteen eleven
+1238 thirteen eleven
+1240 nine eleven
+1241 twelve eleven
+1242 twelve eleven
+1243 ten eleven
+1244 twelve eleven
+1245 twelve eleven
+1248 thirteen eleven
+1250 thirteen eleven
+1251 nine eleven
+1252 twelve eleven
+1253 twelve eleven
+1254 thirteen eleven
+1255 twelve eleven
+1256 thirteen eleven
+1257 twelve eleven
+1258 thirteen eleven
+1261 twelve eleven
+1263 twelve eleven
+1265 ten eleven
+1266 twelve eleven
+1267 twelve eleven
+1268 twelve eleven
+1270 twelve eleven
+1281 twelve eleven
+1283 twelve eleven
+1284 nine eleven
+1285 twelve eleven
+1286 twelve eleven
+1288 nine eleven
+1289 twelve eleven
+1297 twelve eleven
+1298 twelve eleven
+1299 twelve eleven
+836 464 21636 464
+total: 1300 Accuracy: 0.6430769230769231 Macro F1: 0.3414385977474781 Micro F1: 0.6430769230769231
+1303 twelve eleven
+1304 twelve eleven
+1314 nine eleven
+1315 twelve eleven
+1317 twelve eleven
+1318 twelve eleven
+1321 ten eleven
+1322 twelve eleven
+1323 draw eleven
+1325 nine eleven
+1326 ten eleven
+1327 twelve eleven
+1328 nine eleven
+1329 twelve eleven
+1330 twelve eleven
+1331 twelve eleven
+1332 twelve eleven
+1335 twelve eleven
+1336 twelve eleven
+1337 nine eleven
+1338 draw eleven
+1340 nine eleven
+1342 twelve eleven
+1343 twelve eleven
+1344 twelve eleven
+1345 twelve eleven
+1346 ten eleven
+1347 twelve eleven
+1348 twelve eleven
+1350 twelve eleven
+1356 twelve eleven
+1357 twelve eleven
+1358 twelve eleven
+1359 seven eleven
+1360 twelve eleven
+1361 twelve eleven
+1362 twelve eleven
+1367 nine eleven
+1370 twelve eleven
+1371 twelve eleven
+1381 ten eleven
+1382 twelve eleven
+1391 twelve eleven
+1396 thirteen eleven
+1397 twelve eleven
+1398 twelve eleven
+1399 twelve eleven
+1400 twelve eleven
+888 512 23288 512
+total: 1400 Accuracy: 0.6342857142857142 Macro F1: 0.34312154525364746 Micro F1: 0.6342857142857142
+1401 twelve eleven
+1402 twelve eleven
+1405 ten eleven
+1406 ten eleven
+1407 ten eleven
+1408 ten eleven
+1409 ten eleven
+1410 twelve eleven
+1417 twelve eleven
+1428 fourteen fifteen
+1429 fourteen fifteen
+1433 twelve fifteen
+1438 twelve fifteen
+1446 sixteen fifteen
+1449 thirteen fifteen
+1451 fourteen fifteen
+1459 fourteen fifteen
+1462 sixteen fifteen
+1463 sixteen fifteen
+1467 sixteen fifteen
+1468 thirteen fifteen
+1469 fourteen fifteen
+1470 sixteen fifteen
+1471 thirteen fifteen
+1472 twelve fifteen
+1475 fourteen fifteen
+1477 thirteen fifteen
+1480 fourteen fifteen
+1485 thirteen fifteen
+1486 thirteen fifteen
+1495 sixteen fifteen
+1497 sixteen fifteen
+1498 sixteen fifteen
+955 545 24955 545
+total: 1500 Accuracy: 0.6366666666666667 Macro F1: 0.324546233606984 Micro F1: 0.6366666666666667
+1504 fourteen fifteen
+1507 fourteen fifteen
+1508 fourteen fifteen
+1509 fourteen fifteen
+1516 fourteen fifteen
+1517 fourteen fifteen
+1518 fourteen fifteen
+1519 fourteen fifteen
+1522 fourteen fifteen
+1545 fourteen fifteen
+1581 thirteen fifteen
+1582 fourteen fifteen
+1593 fourteen fifteen
+1595 draw fifteen
+1597 fourteen fifteen
+1040 560 26640 560
+total: 1600 Accuracy: 0.65 Macro F1: 0.3317451453228386 Micro F1: 0.65
+1611 fourteen fifteen
+1615 fourteen fifteen
+1640 fourteen fifteen
+1641 fourteen fifteen
+1642 fourteen fifteen
+1645 twelve fifteen
+1657 fourteen fifteen
+1660 fourteen fifteen
+1661 fourteen fifteen
+1662 fourteen fifteen
+1675 fourteen fifteen
+1677 fourteen fifteen
+1679 fourteen fifteen
+1681 fourteen fifteen
+1687 fourteen fifteen
+1688 fourteen fifteen
+1700 fourteen fifteen
+1123 577 28323 577
+total: 1700 Accuracy: 0.6605882352941177 Macro F1: 0.33386255653115887 Micro F1: 0.6605882352941177
+1701 fourteen fifteen
+1713 fourteen fifteen
+1719 fourteen fifteen
+1721 fourteen fifteen
+1725 fourteen fifteen
+1726 fourteen fifteen
+1727 fourteen fifteen
+1728 fourteen fifteen
+1739 fourteen fifteen
+1741 fourteen fifteen
+1752 fourteen fifteen
+1753 fourteen fifteen
+1757 fourteen fifteen
+1760 fourteen fifteen
+1761 fourteen fifteen
+1762 fourteen fifteen
+1770 draw fifteen
+1771 fourteen fifteen
+1772 fourteen fifteen
+1773 fourteen fifteen
+1774 fourteen fifteen
+1775 fourteen fifteen
+1777 fourteen fifteen
+1780 fourteen fifteen
+1781 fourteen fifteen
+1198 602 29998 602
+total: 1800 Accuracy: 0.6655555555555556 Macro F1: 0.33415913947315745 Micro F1: 0.6655555555555556
+1802 fourteen fifteen
+1808 fourteen fifteen
+1809 fourteen fifteen
+1813 fourteen fifteen
+1814 fourteen fifteen
+1816 fourteen fifteen
+1823 fourteen fifteen
+1844 fourteen fifteen
+1845 fourteen fifteen
+1848 fourteen fifteen
+1849 fourteen fifteen
+1850 fourteen fifteen
+1851 eight five
+1852 two five
+1855 ten five
+1856 seven five
+1857 nine five
+1858 draw five
+1861 three five
+1862 fourteen five
+1863 six five
+1864 six five
+1865 seven five
+1866 seven five
+1875 four five
+1877 two five
+1878 four five
+1883 four five
+1885 draw five
+1891 seven five
+1268 632 31668 632
+total: 1900 Accuracy: 0.6673684210526316 Macro F1: 0.3152337616747424 Micro F1: 0.6673684210526316
+1904 four five
+1905 eight five
+1906 four five
+1907 twelve five
+1908 six five
+1913 ten five
+1916 nine five
+1918 two five
+1922 two five
+1930 seven five
+1933 eight five
+1934 seven five
+1938 four five
+1939 four five
+1940 eight five
+1941 nine five
+1945 six four
+1946 six four
+1947 six four
+1950 five four
+1954 five four
+1955 draw four
+1958 five four
+1959 five four
+1960 five four
+1962 five four
+1963 five four
+1964 five four
+1966 five four
+1973 five four
+1974 five four
+1975 six four
+1976 six four
+1977 five four
+1978 draw four
+1979 five four
+1981 five four
+1982 five four
+1983 five four
+1984 five four
+1985 fifteen fourteen
+1986 fifteen fourteen
+1987 fifteen fourteen
+1990 fifteen fourteen
+1993 fifteen fourteen
+1996 thirteen fourteen
+1998 fifteen fourteen
+2000 fifteen fourteen
+1320 680 33320 680
+total: 2000 Accuracy: 0.66 Macro F1: 0.3485630978816193 Micro F1: 0.66
+2002 fifteen fourteen
+2005 fifteen fourteen
+2006 thirteen fourteen
+2007 sixteen fourteen
+2014 fifteen fourteen
+2015 fifteen fourteen
+2016 twelve fourteen
+2017 thirteen fourteen
+2018 thirteen fourteen
+2019 thirteen fourteen
+2020 thirteen fourteen
+2022 twelve fourteen
+2024 fifteen fourteen
+2025 twelve fourteen
+2026 fifteen fourteen
+2027 twelve fourteen
+2028 twelve fourteen
+2029 thirteen fourteen
+2030 thirteen fourteen
+2031 thirteen fourteen
+2032 fifteen fourteen
+2033 thirteen fourteen
+2034 twelve fourteen
+2035 sixteen fourteen
+2037 fifteen fourteen
+2038 fifteen fourteen
+2039 fifteen fourteen
+2040 eight fourteen
+2047 fifteen fourteen
+2053 fifteen fourteen
+2057 fifteen fourteen
+2058 fifteen fourteen
+2060 fifteen fourteen
+2070 twelve fourteen
+2075 fifteen fourteen
+2078 fifteen fourteen
+2079 fifteen fourteen
+2080 fifteen fourteen
+2081 fifteen fourteen
+2082 fifteen fourteen
+2083 fifteen fourteen
+2086 fifteen fourteen
+2090 fifteen fourteen
+2094 fifteen fourteen
+2095 fifteen fourteen
+2097 fifteen fourteen
+2098 fifteen fourteen
+2099 fifteen fourteen
+2100 fifteen fourteen
+1371 729 34971 729
+total: 2100 Accuracy: 0.6528571428571428 Macro F1: 0.36348026890404905 Micro F1: 0.6528571428571428
+2104 fifteen fourteen
+2107 fifteen fourteen
+2108 thirteen fourteen
+2111 fifteen fourteen
+2112 thirteen fourteen
+2113 thirteen fourteen
+2114 fifteen fourteen
+2123 thirteen fourteen
+2125 thirteen fourteen
+2126 fifteen fourteen
+2129 fifteen fourteen
+2134 eleven fourteen
+2137 thirteen fourteen
+2138 twelve fourteen
+2139 twelve fourteen
+2142 twelve fourteen
+2143 thirteen fourteen
+2144 twelve fourteen
+2145 twelve fourteen
+2147 fifteen fourteen
+2149 fifteen fourteen
+2150 fifteen fourteen
+2151 thirteen fourteen
+2152 fifteen fourteen
+2153 fifteen fourteen
+2154 twelve fourteen
+2157 twelve fourteen
+2158 thirteen fourteen
+2159 fifteen fourteen
+2160 fifteen fourteen
+2161 thirteen fourteen
+2162 twelve fourteen
+2163 fifteen fourteen
+2164 fifteen fourteen
+2165 fifteen fourteen
+2166 fifteen fourteen
+2168 fifteen fourteen
+2169 thirteen fourteen
+2170 fifteen fourteen
+2171 fifteen fourteen
+2172 fifteen fourteen
+2178 thirteen fourteen
+2179 fifteen fourteen
+2184 fifteen fourteen
+2187 fifteen fourteen
+2195 fifteen fourteen
+2200 fifteen fourteen
+1424 776 36624 776
+total: 2200 Accuracy: 0.6472727272727272 Macro F1: 0.36736625111732274 Micro F1: 0.6472727272727272
+2201 thirteen fourteen
+2202 fifteen fourteen
+2203 twelve fourteen
+2204 fifteen fourteen
+2205 fifteen fourteen
+2209 fifteen fourteen
+2218 fifteen fourteen
+2222 fifteen fourteen
+2226 fifteen fourteen
+2227 fifteen fourteen
+2228 thirteen fourteen
+2229 fifteen fourteen
+2231 thirteen fourteen
+2232 twelve fourteen
+2241 fifteen fourteen
+2251 thirteen fourteen
+2253 thirteen fourteen
+2256 fifteen fourteen
+2258 fifteen fourteen
+2260 thirteen fourteen
+2262 thirteen fourteen
+2270 twelve fourteen
+2274 fifteen fourteen
+2279 draw fourteen
+2282 twelve fourteen
+2283 fifteen fourteen
+2284 thirteen fourteen
+2288 fifteen fourteen
+2293 fifteen fourteen
+2294 fifteen fourteen
+2295 fifteen fourteen
+2296 fifteen fourteen
+2297 fifteen fourteen
+1491 809 38291 809
+total: 2300 Accuracy: 0.6482608695652174 Macro F1: 0.3707087449465229 Micro F1: 0.6482608695652174
+2305 fifteen fourteen
+2306 thirteen fourteen
+2307 thirteen fourteen
+2309 thirteen fourteen
+2330 thirteen fourteen
+2337 twelve fourteen
+2376 fifteen fourteen
+2377 fifteen fourteen
+2378 fifteen fourteen
+2394 fifteen fourteen
+1581 819 39981 819
+total: 2400 Accuracy: 0.65875 Macro F1: 0.3751286276803887 Micro F1: 0.65875
+2401 thirteen fourteen
+2404 thirteen fourteen
+2405 fifteen fourteen
+2406 fifteen fourteen
+2409 fifteen fourteen
+2411 fifteen fourteen
+2412 fifteen fourteen
+2413 fifteen fourteen
+2414 fifteen fourteen
+2415 twelve fourteen
+2416 fifteen fourteen
+2417 twelve fourteen
+2421 draw fourteen
+2422 fifteen fourteen
+2426 twelve fourteen
+2428 twelve fourteen
+2429 twelve fourteen
+2430 fifteen fourteen
+2431 fifteen fourteen
+2432 twelve fourteen
+2443 fifteen fourteen
+2444 fifteen fourteen
+2448 fifteen fourteen
+2451 fifteen fourteen
+2462 fifteen fourteen
+2470 fifteen fourteen
+2471 fifteen fourteen
+2472 fifteen fourteen
+2474 fifteen fourteen
+2475 fifteen fourteen
+2476 fifteen fourteen
+2477 thirteen fourteen
+2479 fifteen fourteen
+2480 fifteen fourteen
+2487 draw fourteen
+2489 twelve fourteen
+1645 855 41645 855
+total: 2500 Accuracy: 0.658 Macro F1: 0.3748547563444068 Micro F1: 0.658
+2506 thirteen fourteen
+2507 fifteen fourteen
+2508 fifteen fourteen
+2510 twelve fourteen
+2512 thirteen fourteen
+2518 thirteen fourteen
+2519 thirteen fourteen
+2523 fifteen fourteen
+2524 thirteen fourteen
+2525 thirteen fourteen
+2527 thirteen fourteen
+2530 fifteen fourteen
+2533 fifteen fourteen
+2534 fifteen fourteen
+2537 thirteen fourteen
+2539 thirteen fourteen
+2544 fifteen fourteen
+2549 thirteen fourteen
+2556 draw fourteen
+2557 twelve fourteen
+2559 thirteen fourteen
+2568 fifteen fourteen
+2569 thirteen fourteen
+2570 thirteen fourteen
+2571 fifteen fourteen
+2573 fifteen fourteen
+2574 twelve fourteen
+2577 fifteen fourteen
+2578 fifteen fourteen
+2579 fifteen fourteen
+2582 fifteen fourteen
+2583 fifteen fourteen
+2586 fifteen fourteen
+2589 fifteen fourteen
+2597 thirteen fourteen
+2598 thirteen fourteen
+2599 fifteen fourteen
+1708 892 43308 892
+total: 2600 Accuracy: 0.6569230769230769 Macro F1: 0.37460542907025074 Micro F1: 0.6569230769230769
+2601 thirteen fourteen
+2603 thirteen fourteen
+2604 thirteen fourteen
+2605 thirteen fourteen
+2607 thirteen fourteen
+2622 thirteen fourteen
+2623 draw fourteen
+2630 thirteen fourteen
+2660 fifteen fourteen
+2674 twelve fourteen
+2677 twelve fourteen
+2678 fifteen fourteen
+2679 fifteen fourteen
+2682 fifteen fourteen
+2689 fifteen fourteen
+1793 907 44993 907
+total: 2700 Accuracy: 0.664074074074074 Macro F1: 0.37598562449554496 Micro F1: 0.664074074074074
+2701 fifteen fourteen
+2707 fifteen fourteen
+2709 twelve fourteen
+2722 fifteen fourteen
+2724 fifteen fourteen
+2726 fifteen fourteen
+2730 thirteen fourteen
+2732 fifteen fourteen
+2734 twelve fourteen
+2736 fifteen fourteen
+2738 thirteen fourteen
+2740 twelve fourteen
+2744 fifteen fourteen
+2748 draw fourteen
+2751 fifteen fourteen
+2752 fifteen fourteen
+2760 fifteen fourteen
+2761 fifteen fourteen
+2762 fifteen fourteen
+2763 fifteen fourteen
+2764 thirteen fourteen
+2773 fifteen fourteen
+2775 thirteen fourteen
+2780 thirteen fourteen
+2782 eleven fourteen
+2784 thirteen fourteen
+2785 thirteen fourteen
+2786 thirteen fourteen
+2791 thirteen fourteen
+1864 936 46664 936
+total: 2800 Accuracy: 0.6657142857142857 Macro F1: 0.37585020010898007 Micro F1: 0.6657142857142857
+2801 draw fourteen
+2811 thirteen fourteen
+2827 thirteen fourteen
+2828 twelve fourteen
+2829 twelve fourteen
+2830 thirteen fourteen
+2832 thirteen fourteen
+2839 thirteen fourteen
+2841 thirteen fourteen
+2846 thirteen fourteen
+2847 thirteen fourteen
+2848 thirteen fourteen
+2849 fifteen fourteen
+2855 thirteen fourteen
+2856 thirteen fourteen
+2857 fifteen fourteen
+2858 fifteen fourteen
+2861 draw fourteen
+2862 twelve fourteen
+2864 thirteen fourteen
+2866 thirteen fourteen
+2867 thirteen fourteen
+2868 thirteen fourteen
+2869 thirteen fourteen
+2870 twelve fourteen
+2872 draw fourteen
+2875 fifteen fourteen
+2876 thirteen fourteen
+2877 fifteen fourteen
+2880 thirteen fourteen
+2883 twelve fourteen
+2888 thirteen fourteen
+2889 thirteen fourteen
+2890 thirteen fourteen
+2893 five fourteen
+2895 thirteen fourteen
+2900 fifteen nine
+1927 973 48327 973
+total: 2900 Accuracy: 0.6644827586206896 Macro F1: 0.3790504663156368 Micro F1: 0.6644827586206896
+2902 eleven nine
+2903 eight nine
+2909 eight nine
+2921 ten nine
+2922 ten nine
+2923 twelve nine
+2924 ten nine
+2925 ten nine
+2926 twelve nine
+2930 eight nine
+2931 twelve nine
+2935 seven nine
+2945 seven nine
+2946 ten nine
+2948 eleven nine
+2954 fifteen nine
+2955 fifteen nine
+2956 eleven nine
+2958 eight nine
+2959 eight nine
+2960 eight nine
+2961 five nine
+2962 eight nine
+2964 twelve nine
+2970 twelve nine
+2971 eleven nine
+2972 eight nine
+2973 eleven nine
+2976 ten nine
+2979 ten nine
+2983 thirteen nine
+2985 eleven nine
+2987 eight nine
+2991 seven nine
+2992 ten nine
+2996 seven nine
+2997 seven nine
+2998 eleven nine
+1989 1011 49989 1011
+total: 3000 Accuracy: 0.663 Macro F1: 0.40009252984093446 Micro F1: 0.663
+3002 eleven nine
+3004 eleven nine
+3005 thirteen nine
+3007 thirteen nine
+3014 eight nine
+3015 eleven nine
+3017 eight nine
+3024 eleven nine
+3027 eleven nine
+3031 thirteen nine
+3032 two nine
+3033 twelve nine
+3034 eleven nine
+3035 two nine
+3038 two nine
+3040 twelve nine
+3041 twelve nine
+3042 fourteen nine
+3044 eight nine
+3045 five nine
+3047 five nine
+3048 ten nine
+3049 eight nine
+3050 ten nine
+3051 six nine
+3052 seven nine
+3053 eleven nine
+3056 ten nine
+3057 ten nine
+3058 seven nine
+3060 eight nine
+3061 eight nine
+3062 thirteen nine
+3063 six nine
+3065 ten nine
+3069 ten nine
+3070 eight nine
+3071 five nine
+3072 thirteen nine
+3073 eleven nine
+3074 twelve nine
+3076 ten nine
+3081 ten nine
+3082 eleven nine
+3083 eleven nine
+3084 eleven nine
+3088 twelve nine
+3090 twelve nine
+3095 eight nine
+3096 twelve nine
+3097 eleven nine
+3098 ten nine
+3099 eleven nine
+2036 1064 51636 1064
+total: 3100 Accuracy: 0.6567741935483871 Macro F1: 0.4016713733902781 Micro F1: 0.6567741935483871
+3103 seven nine
+3106 twelve nine
+3107 seven nine
+3110 eleven nine
+3112 eleven nine
+3114 eleven nine
+3116 seven nine
+3124 eight nine
+3125 ten nine
+3128 ten nine
+3130 eight nine
+3133 seven nine
+3134 seven nine
+3135 ten nine
+3139 thirteen nine
+3141 ten nine
+3144 seven nine
+3147 eleven nine
+3148 eleven nine
+3149 twelve nine
+3150 draw nine
+3151 eleven nine
+3154 ten nine
+3155 eleven nine
+3163 ten nine
+3169 eleven nine
+3170 eight nine
+3171 ten nine
+3173 eleven nine
+3176 eleven nine
+3183 eleven nine
+3185 five nine
+3186 ten nine
+3187 ten nine
+3195 eight nine
+3196 eight nine
+3197 ten nine
+2099 1101 53299 1101
+total: 3200 Accuracy: 0.6559375 Macro F1: 0.40443554061034326 Micro F1: 0.6559375
+3206 eight nine
+3214 ten nine
+3216 ten nine
+3217 five nine
+3219 ten nine
+3220 ten nine
+3223 ten nine
+3224 ten nine
+3225 eight nine
+3226 eight nine
+3227 eight nine
+3233 eleven nine
+3235 eight nine
+3236 eight nine
+3237 eleven nine
+3238 five one
+3239 draw one
+3242 five one
+3243 two one
+3244 two one
+3245 five one
+3246 two one
+3247 five one
+3248 two one
+3249 two one
+3250 two one
+3252 two one
+3253 seven one
+3254 ten seven
+3256 nine seven
+3257 nine seven
+3259 ten seven
+3260 nine seven
+3261 ten seven
+3262 nine seven
+3263 eight seven
+3264 draw seven
+3265 draw seven
+3266 fourteen seven
+3267 ten seven
+3268 nine seven
+3269 eight seven
+3270 eight seven
+3273 eight seven
+3274 nine seven
+3275 eight seven
+3276 eight seven
+3277 eight seven
+3278 draw seven
+3279 eight seven
+3280 eight seven
+3281 eight seven
+3282 nine seven
+3283 ten seven
+3284 nine seven
+3287 nine seven
+3288 eleven seven
+3291 eleven seven
+3292 eight seven
+3293 eleven seven
+3296 five seven
+3298 five seven
+2137 1163 54937 1163
+total: 3300 Accuracy: 0.6475757575757576 Macro F1: 0.37833791510893255 Micro F1: 0.6475757575757576
+3301 thirteen seven
+3302 eleven seven
+3303 eleven seven
+3304 nine seven
+3306 nine seven
+3307 twelve seven
+3308 nine seven
+3309 nine seven
+3310 five seven
+3311 eight seven
+3313 fourteen seven
+3314 nine seven
+3315 eight seven
+3316 fourteen seven
+3317 six seven
+3318 six seven
+3320 eight seven
+3321 eight seven
+3325 five seven
+3327 twelve seven
+3328 eleven seven
+3332 ten seven
+3333 ten seven
+3334 eleven seven
+3338 eleven seven
+3340 eight seven
+3341 eleven seven
+3342 nine seven
+3344 nine seven
+3347 five seven
+3350 nine seven
+3351 ten seven
+3353 eight seven
+3357 five seven
+3361 ten seven
+3362 twelve seven
+3364 ten seven
+3366 ten seven
+3367 eight seven
+3369 eight seven
+3370 eight seven
+3371 eight seven
+3372 eight seven
+3373 nine seven
+3374 nine seven
+3375 eight seven
+3376 nine seven
+3378 nine seven
+3379 five seven
+3380 eight seven
+3381 four seven
+3382 eight seven
+3383 eight seven
+3385 ten seven
+3386 eight seven
+3387 eight seven
+3390 eight seven
+3391 seven six
+3392 seven six
+3393 nine six
+3394 nine six
+3395 five six
+3396 ten six
+3397 ten six
+3398 seven six
+3399 five six
+3400 five six
+2170 1230 56570 1230
+total: 3400 Accuracy: 0.638235294117647 Macro F1: 0.3826377581651991 Micro F1: 0.638235294117647
+3401 nine six
+3402 nine six
+3404 five six
+3406 eight six
+3409 eight six
+3414 five six
+3423 eight six
+3426 eight six
+3427 eight six
+3432 seven six
+3433 seven six
+3436 seven six
+3439 five six
+3441 eight six
+3444 five six
+3446 seven six
+3447 eight six
+3448 seven six
+3449 eight six
+3450 seven six
+3452 five six
+3453 eight six
+3454 nine six
+3455 five six
+3456 eight six
+3457 eight six
+3459 five six
+3460 eight six
+3461 nine six
+3462 nine six
+3463 nine six
+3467 eight six
+3469 five six
+3471 draw six
+3472 seven six
+3473 seven six
+3474 five six
+3475 five six
+3477 eight six
+3478 five six
+3479 seven six
+3481 zero six
+3484 seven six
+3485 nine six
+3488 ten six
+3489 eight six
+3491 five six
+3492 ten six
+3493 eight six
+3495 eight six
+3496 two six
+3499 five six
+3500 five six
+2217 1283 58217 1283
+total: 3500 Accuracy: 0.6334285714285715 Macro F1: 0.35232063759907956 Micro F1: 0.6334285714285715
+3501 five six
+3502 eight six
+3503 seven six
+3504 nine six
+3505 eight six
+3506 nine six
+3507 nine six
+3508 nine six
+3509 fourteen sixteen
+3510 fifteen sixteen
+3511 fifteen sixteen
+3512 fifteen sixteen
+3513 fifteen sixteen
+3514 fifteen sixteen
+3515 fifteen sixteen
+3516 fifteen sixteen
+3517 fifteen sixteen
+3518 fifteen sixteen
+3520 fifteen sixteen
+3521 fifteen sixteen
+3522 fifteen sixteen
+3523 fifteen sixteen
+3524 fourteen sixteen
+3525 fifteen sixteen
+3526 fifteen sixteen
+3530 fifteen sixteen
+3531 fifteen sixteen
+3532 fifteen sixteen
+3533 fifteen sixteen
+3536 fifteen sixteen
+3537 fifteen sixteen
+3545 fifteen sixteen
+3549 fifteen sixteen
+3550 fifteen sixteen
+3551 fourteen sixteen
+3556 fifteen sixteen
+3557 fifteen sixteen
+3558 fifteen sixteen
+3559 fifteen sixteen
+3560 fifteen sixteen
+3564 fifteen sixteen
+3565 fifteen sixteen
+3567 fifteen sixteen
+3568 fifteen sixteen
+3569 fifteen sixteen
+3570 fifteen sixteen
+3571 fifteen sixteen
+3572 fifteen sixteen
+3573 fifteen sixteen
+3574 fifteen sixteen
+3575 draw sixteen
+3576 fifteen sixteen
+3577 fifteen sixteen
+3578 fifteen sixteen
+3579 fifteen sixteen
+3580 fifteen sixteen
+3581 fifteen sixteen
+3582 fifteen sixteen
+3583 fifteen sixteen
+3584 fifteen sixteen
+3585 fifteen sixteen
+3586 fifteen sixteen
+3587 nine ten
+3588 sixteen ten
+3590 nine ten
+3591 twelve ten
+3592 thirteen ten
+3593 twelve ten
+3594 eleven ten
+3595 nine ten
+3597 eight ten
+3599 nine ten
+3600 twelve ten
+2244 1356 59844 1356
+total: 3600 Accuracy: 0.6233333333333333 Macro F1: 0.3744145633195553 Micro F1: 0.6233333333333333
+3601 nine ten
+3602 eight ten
+3603 eight ten
+3604 twelve ten
+3609 seven ten
+3612 fifteen ten
+3613 eight ten
+3614 eight ten
+3615 eight ten
+3619 eleven ten
+3620 fifteen ten
+3621 nine ten
+3622 nine ten
+3623 nine ten
+3624 draw ten
+3625 eleven ten
+3626 thirteen ten
+3627 fifteen ten
+3628 eight ten
+3629 fourteen ten
+3630 fourteen ten
+3631 nine ten
+3632 nine ten
+3633 twelve ten
+3634 nine ten
+3636 twelve ten
+3638 seven ten
+3639 seven ten
+3640 twelve ten
+3645 nine ten
+3646 nine ten
+3649 thirteen ten
+3650 fifteen ten
+3651 nine ten
+3653 nine ten
+3654 nine ten
+3655 nine ten
+3656 nine ten
+3657 thirteen ten
+3658 fifteen ten
+3659 nine ten
+3660 nine ten
+3661 nine ten
+3662 twelve ten
+3664 nine ten
+3665 nine ten
+3666 nine ten
+3668 nine ten
+3671 fourteen ten
+3672 fourteen ten
+3674 twelve ten
+3676 twelve ten
+3677 twelve ten
+3678 twelve ten
+3679 fourteen ten
+3681 eleven ten
+3682 twelve ten
+3683 thirteen ten
+3684 nine ten
+3685 eleven ten
+3687 fourteen ten
+3688 twelve ten
+3689 nine ten
+3690 thirteen ten
+3692 eight ten
+3693 thirteen ten
+3694 nine ten
+3696 fourteen ten
+3698 nine ten
+3699 nine ten
+3700 fifteen ten
+2273 1427 61473 1427
+total: 3700 Accuracy: 0.6143243243243244 Macro F1: 0.3832923830215159 Micro F1: 0.6143243243243244
+3701 twelve ten
+3702 eleven ten
+3703 nine ten
+3707 nine ten
+3710 nine ten
+3711 nine ten
+3712 fourteen ten
+3713 twelve ten
+3715 eleven ten
+3719 nine ten
+3720 nine ten
+3721 nine ten
+3722 nine ten
+3723 eleven ten
+3724 nine ten
+3726 seven ten
+3728 twelve ten
+3729 eleven ten
+3730 eleven ten
+3739 eight ten
+3741 nine ten
+3747 eight ten
+3750 eight ten
+3753 thirteen ten
+3755 nine ten
+3756 nine ten
+3757 nine ten
+3758 eleven ten
+3759 eleven ten
+3761 nine ten
+3762 eleven ten
+3763 eleven ten
+3764 thirteen ten
+3765 twelve ten
+3766 twelve ten
+3767 twelve ten
+3768 twelve ten
+3769 fourteen ten
+3771 fifteen ten
+3772 nine ten
+3773 twelve ten
+3774 thirteen ten
+3775 seven ten
+3776 fourteen ten
+3778 twelve ten
+3782 seven ten
+3784 nine ten
+3785 twelve ten
+3786 twelve ten
+3787 twelve ten
+3788 eight ten
+3789 thirteen ten
+3790 twelve ten
+3792 nine ten
+3794 nine ten
+3798 twelve ten
+3799 thirteen ten
+3800 fourteen ten
+2315 1485 63115 1485
+total: 3800 Accuracy: 0.6092105263157894 Macro F1: 0.3883704276981509 Micro F1: 0.6092105263157894
+3802 fifteen ten
+3804 five ten
+3806 nine ten
+3808 twelve ten
+3810 five ten
+3811 eleven ten
+3812 twelve ten
+3813 eleven ten
+3814 eleven ten
+3815 nine ten
+3816 thirteen ten
+3817 eight ten
+3818 nine ten
+3819 seven ten
+3821 seven ten
+3824 eleven ten
+3825 eleven ten
+3827 eleven ten
+3828 nine ten
+3829 eight ten
+3830 fourteen ten
+3831 twelve ten
+3835 eleven ten
+3836 thirteen ten
+3837 seven ten
+3839 nine ten
+3840 eleven ten
+3842 twelve ten
+3843 eleven ten
+3844 eleven ten
+3845 twelve ten
+3848 twelve ten
+3850 twelve ten
+3851 twelve ten
+3855 eleven ten
+3856 twelve ten
+3857 seven ten
+3858 nine ten
+3859 twelve ten
+3861 twelve ten
+3862 eleven ten
+3863 eleven ten
+3866 twelve ten
+3867 twelve ten
+3870 eleven ten
+3871 nine ten
+3875 eleven ten
+3876 nine ten
+3880 twelve ten
+3882 nine ten
+3887 five ten
+3890 twelve ten
+3891 twelve ten
+3892 nine ten
+3894 eight ten
+3896 twelve ten
+3897 twelve ten
+2358 1542 64758 1542
+total: 3900 Accuracy: 0.6046153846153847 Macro F1: 0.3898633482129635 Micro F1: 0.6046153846153847
+3904 nine ten
+3905 twelve ten
+3906 twelve ten
+3907 twelve ten
+3909 twelve ten
+3912 nine ten
+3913 eleven ten
+3914 eleven ten
+3915 nine ten
+3916 twelve ten
+3917 eleven ten
+3919 twelve ten
+3920 nine ten
+3921 eight ten
+3922 nine ten
+3923 eleven ten
+3924 eleven ten
+3925 nine ten
+3926 nine ten
+3929 nine ten
+3931 eleven ten
+3941 eleven ten
+3942 eleven ten
+3947 eleven ten
+3948 eleven ten
+3950 nine ten
+3951 eight ten
+3952 nine ten
+3956 nine ten
+3958 eleven ten
+3962 nine ten
+3963 nine ten
+3964 nine ten
+3969 eight ten
+3970 eleven ten
+3971 draw ten
+3972 eight ten
+3976 eleven ten
+3977 nine ten
+3978 nine ten
+3979 nine ten
+3980 eleven ten
+3982 eight ten
+3983 twelve ten
+3984 twelve thirteen
+3985 fifteen thirteen
+3986 twelve thirteen
+3987 twelve thirteen
+3988 fifteen thirteen
+3991 fourteen thirteen
+3992 twelve thirteen
+3994 fourteen thirteen
+3995 fifteen thirteen
+4000 fifteen thirteen
+2404 1596 66404 1596
+total: 4000 Accuracy: 0.601 Macro F1: 0.39429312134903605 Micro F1: 0.601
+4001 fifteen thirteen
+4005 fourteen thirteen
+4006 fourteen thirteen
+4008 fourteen thirteen
+4009 fourteen thirteen
+4010 fourteen thirteen
+4011 fifteen thirteen
+4014 twelve thirteen
+4019 fourteen thirteen
+4025 fourteen thirteen
+4026 fourteen thirteen
+4028 fourteen thirteen
+4029 fourteen thirteen
+4033 twelve thirteen
+4034 fourteen thirteen
+4036 twelve thirteen
+4037 fifteen thirteen
+4046 fourteen thirteen
+4048 twelve thirteen
+4049 fourteen thirteen
+4053 fourteen thirteen
+4056 fourteen thirteen
+4057 twelve thirteen
+4058 twelve thirteen
+4059 fourteen thirteen
+4060 fourteen thirteen
+4062 draw thirteen
+4063 fifteen thirteen
+4065 fourteen thirteen
+4066 fifteen thirteen
+4068 fifteen thirteen
+4069 fifteen thirteen
+4070 fifteen thirteen
+4071 twelve thirteen
+4072 eleven thirteen
+4077 twelve thirteen
+4079 twelve thirteen
+4080 fourteen thirteen
+4081 fourteen thirteen
+4082 fourteen thirteen
+4083 fourteen thirteen
+4084 twelve thirteen
+4085 twelve thirteen
+4088 fifteen thirteen
+4089 fifteen thirteen
+4090 twelve thirteen
+4091 fourteen thirteen
+4093 twelve thirteen
+4095 fifteen thirteen
+4096 fifteen thirteen
+4098 fourteen thirteen
+2453 1647 68053 1647
+total: 4100 Accuracy: 0.5982926829268292 Macro F1: 0.4072323734415901 Micro F1: 0.5982926829268292
+4104 twelve thirteen
+4107 fifteen thirteen
+4108 twelve thirteen
+4109 fifteen thirteen
+4110 twelve thirteen
+4111 twelve thirteen
+4112 twelve thirteen
+4115 twelve thirteen
+4117 twelve thirteen
+4118 eleven thirteen
+4119 twelve thirteen
+4120 twelve thirteen
+4122 fifteen thirteen
+4123 twelve thirteen
+4124 twelve thirteen
+4125 fourteen thirteen
+4126 fifteen thirteen
+4128 twelve thirteen
+4129 fourteen thirteen
+4130 fifteen thirteen
+4132 fifteen thirteen
+4134 fourteen thirteen
+4136 twelve thirteen
+4137 fourteen thirteen
+4138 fourteen thirteen
+4142 fourteen thirteen
+4143 fourteen thirteen
+4150 eleven thirteen
+4155 fourteen thirteen
+4156 twelve thirteen
+4161 fourteen thirteen
+4162 twelve thirteen
+4163 fifteen thirteen
+4165 twelve thirteen
+4167 twelve thirteen
+4168 twelve thirteen
+4169 fourteen thirteen
+4177 twelve thirteen
+4178 twelve thirteen
+4179 fourteen thirteen
+4180 twelve thirteen
+4181 fifteen thirteen
+4182 twelve thirteen
+4183 fourteen thirteen
+4184 twelve thirteen
+4187 fourteen thirteen
+4189 twelve thirteen
+4190 twelve thirteen
+4191 twelve thirteen
+4192 twelve thirteen
+4194 twelve thirteen
+4195 fifteen thirteen
+4196 fourteen thirteen
+4197 nine thirteen
+4198 fourteen thirteen
+4199 fourteen thirteen
+2497 1703 69697 1703
+total: 4200 Accuracy: 0.5945238095238096 Macro F1: 0.4111264460511222 Micro F1: 0.5945238095238096
+4202 twelve thirteen
+4204 twelve thirteen
+4205 fourteen thirteen
+4209 fourteen thirteen
+4210 fourteen thirteen
+4211 twelve thirteen
+4213 twelve thirteen
+4214 fourteen thirteen
+4215 twelve thirteen
+4216 fourteen thirteen
+4217 fourteen thirteen
+4218 twelve thirteen
+4219 fourteen thirteen
+4221 fourteen thirteen
+4222 fifteen thirteen
+4224 fifteen thirteen
+4225 fourteen thirteen
+4228 ten thirteen
+4229 ten thirteen
+4231 fifteen thirteen
+4233 twelve thirteen
+4234 twelve thirteen
+4235 twelve thirteen
+4237 fourteen thirteen
+4238 twelve thirteen
+4239 fourteen thirteen
+4240 twelve thirteen
+4241 draw thirteen
+4243 fifteen thirteen
+4245 fifteen thirteen
+4246 fourteen thirteen
+4247 fourteen thirteen
+4249 fourteen thirteen
+4250 twelve thirteen
+4251 fourteen thirteen
+4253 twelve thirteen
+4257 fourteen thirteen
+4259 fourteen thirteen
+4260 twelve thirteen
+4262 fourteen thirteen
+4263 fourteen thirteen
+4264 twelve thirteen
+4265 eleven thirteen
+4268 twelve thirteen
+4269 fourteen thirteen
+4270 fourteen thirteen
+4271 fourteen thirteen
+4272 eleven thirteen
+4276 fourteen thirteen
+4277 fourteen thirteen
+4278 fourteen thirteen
+4282 twelve thirteen
+4285 fourteen thirteen
+4286 eleven thirteen
+4287 fourteen thirteen
+4288 fourteen thirteen
+4289 fourteen thirteen
+4293 fourteen thirteen
+4294 twelve thirteen
+4295 eleven thirteen
+4296 eleven thirteen
+4297 fourteen thirteen
+4298 eleven thirteen
+4299 fourteen thirteen
+4300 fourteen thirteen
+2532 1768 71332 1768
+total: 4300 Accuracy: 0.5888372093023255 Macro F1: 0.4111934089843327 Micro F1: 0.5888372093023255
+4310 fourteen thirteen
+4311 fourteen thirteen
+4312 fourteen thirteen
+4313 fourteen thirteen
+4314 fourteen thirteen
+4315 fourteen thirteen
+4318 fourteen thirteen
+4319 fourteen thirteen
+4323 fourteen thirteen
+4333 draw thirteen
+4334 fourteen thirteen
+4335 fourteen thirteen
+4338 fourteen thirteen
+4339 fourteen thirteen
+4350 twelve thirteen
+4354 fifteen thirteen
+4355 twelve thirteen
+4361 fourteen thirteen
+4364 fourteen thirteen
+4365 fifteen thirteen
+4366 fourteen thirteen
+4368 eleven thirteen
+4369 fourteen thirteen
+4370 fourteen thirteen
+4377 twelve thirteen
+4378 twelve thirteen
+4379 twelve thirteen
+4380 fourteen thirteen
+4381 twelve thirteen
+4382 twelve thirteen
+4383 fourteen thirteen
+4384 fourteen thirteen
+4385 fourteen thirteen
+4387 twelve thirteen
+4388 twelve thirteen
+4390 twelve thirteen
+4393 twelve thirteen
+4394 twelve thirteen
+4397 fourteen thirteen
+4398 fifteen thirteen
+4399 fifteen thirteen
+4400 twelve thirteen
+2590 1810 72990 1810
+total: 4400 Accuracy: 0.5886363636363636 Macro F1: 0.4138452857713014 Micro F1: 0.5886363636363636
+4401 twelve thirteen
+4402 fourteen thirteen
+4404 fourteen thirteen
+4406 twelve thirteen
+4407 ten thirteen
+4408 twelve thirteen
+4409 fourteen thirteen
+4410 fourteen thirteen
+4411 fourteen thirteen
+4412 fourteen thirteen
+4413 fourteen thirteen
+4414 eleven thirteen
+4415 fourteen thirteen
+4421 fourteen thirteen
+4423 fifteen thirteen
+4426 twelve thirteen
+4427 fourteen thirteen
+4430 fourteen thirteen
+4435 fourteen thirteen
+4436 fifteen thirteen
+4448 fourteen thirteen
+4453 twelve thirteen
+4454 twelve thirteen
+4455 fifteen thirteen
+4456 twelve thirteen
+4457 eleven thirteen
+4458 fourteen thirteen
+4460 fourteen thirteen
+4462 fourteen thirteen
+4470 twelve thirteen
+4472 twelve thirteen
+4473 fourteen thirteen
+4474 fourteen thirteen
+4475 fifteen thirteen
+4480 fourteen thirteen
+4481 twelve thirteen
+4484 twelve thirteen
+4485 twelve thirteen
+4486 twelve thirteen
+4487 twelve thirteen
+4489 fourteen thirteen
+4490 twelve thirteen
+4491 twelve thirteen
+4492 ten thirteen
+4493 ten thirteen
+4494 twelve thirteen
+4500 twelve thirteen
+2643 1857 74643 1857
+total: 4500 Accuracy: 0.5873333333333334 Macro F1: 0.41490369357983453 Micro F1: 0.5873333333333334
+4501 twelve thirteen
+4502 twelve thirteen
+4503 twelve thirteen
+4508 ten thirteen
+4515 fourteen thirteen
+4516 twelve thirteen
+4518 fourteen thirteen
+4521 fourteen thirteen
+4522 twelve thirteen
+4524 twelve thirteen
+4525 twelve thirteen
+4526 twelve thirteen
+4532 fourteen thirteen
+4533 fourteen thirteen
+4535 fourteen thirteen
+4536 twelve thirteen
+4537 twelve thirteen
+4538 fourteen thirteen
+4541 twelve thirteen
+4542 twelve thirteen
+4543 fourteen thirteen
+4544 fourteen thirteen
+4545 fourteen thirteen
+4548 twelve thirteen
+4550 fourteen thirteen
+4552 fifteen thirteen
+4553 fifteen thirteen
+4554 fourteen thirteen
+4555 fourteen thirteen
+4557 draw thirteen
+4559 twelve thirteen
+4562 twelve thirteen
+4564 fourteen thirteen
+4565 eleven thirteen
+4566 eleven thirteen
+4569 twelve thirteen
+4572 twelve thirteen
+4573 twelve thirteen
+4574 fourteen thirteen
+4575 twelve thirteen
+4576 twelve thirteen
+4577 twelve thirteen
+4578 twelve thirteen
+4579 eleven thirteen
+4580 twelve thirteen
+4581 twelve thirteen
+4582 twelve thirteen
+4586 fifteen thirteen
+4587 eleven thirteen
+4589 twelve thirteen
+4590 twelve thirteen
+4591 fourteen thirteen
+4592 fourteen thirteen
+4593 fourteen thirteen
+4595 fourteen thirteen
+4598 fourteen thirteen
+4599 eleven thirteen
+4600 fourteen thirteen
+2685 1915 76285 1915
+total: 4600 Accuracy: 0.5836956521739131 Macro F1: 0.41459325749804204 Micro F1: 0.5836956521739131
+4601 twelve thirteen
+4602 eleven thirteen
+4604 fifteen thirteen
+4608 five thirteen
+4609 fourteen thirteen
+4611 fourteen thirteen
+4613 ten thirteen
+4616 twelve thirteen
+4617 twelve thirteen
+4620 fourteen thirteen
+4621 fourteen thirteen
+4622 fourteen thirteen
+4624 ten thirteen
+4625 fourteen thirteen
+4626 fourteen thirteen
+4627 twelve thirteen
+4632 fourteen thirteen
+4633 twelve thirteen
+4635 fourteen thirteen
+4637 twelve thirteen
+4639 fourteen thirteen
+4642 twelve thirteen
+4643 fourteen thirteen
+4646 fourteen thirteen
+4654 fourteen thirteen
+4656 fourteen thirteen
+4659 fourteen thirteen
+4670 eleven thirteen
+4682 twelve thirteen
+4683 twelve thirteen
+4685 fourteen thirteen
+4694 fourteen thirteen
+2753 1947 77953 1947
+total: 4700 Accuracy: 0.5857446808510638 Macro F1: 0.4159921377452359 Micro F1: 0.5857446808510638
+4707 twelve thirteen
+4709 twelve thirteen
+4710 twelve thirteen
+4711 ten thirteen
+4713 nine thirteen
+4714 nine thirteen
+4716 seven thirteen
+4717 twelve thirteen
+4718 fourteen thirteen
+4719 eleven thirteen
+4720 twelve thirteen
+4721 fourteen thirteen
+4722 fourteen thirteen
+4723 fourteen thirteen
+4724 fourteen thirteen
+4725 fourteen thirteen
+4727 twelve thirteen
+4728 ten thirteen
+4730 twelve thirteen
+4731 draw thirteen
+4732 fourteen thirteen
+4733 fourteen thirteen
+4736 fourteen thirteen
+4743 twelve thirteen
+4744 twelve thirteen
+4745 twelve thirteen
+4746 twelve thirteen
+4753 twelve thirteen
+4778 fourteen thirteen
+4781 fourteen thirteen
+4796 twelve thirteen
+2822 1978 79622 1978
+total: 4800 Accuracy: 0.5879166666666666 Macro F1: 0.4170759703726683 Micro F1: 0.5879166666666666
+4801 fourteen thirteen
+4810 twelve thirteen
+4811 twelve thirteen
+4813 twelve thirteen
+4815 twelve thirteen
+4816 twelve thirteen
+4817 twelve thirteen
+4818 twelve thirteen
+4820 fourteen thirteen
+4823 two three
+4824 five three
+4825 two three
+4826 two three
+4828 five three
+4829 four three
+4830 four three
+4831 four three
+4833 five three
+4834 five three
+4837 four three
+4838 four three
+4839 eleven twelve
+4840 eleven twelve
+4842 ten twelve
+4843 fourteen twelve
+4845 eleven twelve
+4846 fourteen twelve
+4848 thirteen twelve
+4849 fifteen twelve
+4853 fourteen twelve
+4854 fourteen twelve
+4855 thirteen twelve
+4856 thirteen twelve
+4858 thirteen twelve
+4860 fifteen twelve
+4862 fourteen twelve
+4865 eleven twelve
+4866 thirteen twelve
+4867 fifteen twelve
+4869 fourteen twelve
+4870 fifteen twelve
+4871 fifteen twelve
+4872 nine twelve
+4873 seven twelve
+4875 thirteen twelve
+4876 fifteen twelve
+4882 fifteen twelve
+4883 fifteen twelve
+4885 thirteen twelve
+4887 thirteen twelve
+4889 thirteen twelve
+4890 eleven twelve
+4893 fourteen twelve
+4894 fourteen twelve
+4897 thirteen twelve
+4898 fifteen twelve
+2866 2034 81266 2034
+total: 4900 Accuracy: 0.5848979591836735 Macro F1: 0.4405624870758359 Micro F1: 0.5848979591836735
+4902 fourteen twelve
+4906 eleven twelve
+4911 thirteen twelve
+4912 eleven twelve
+4916 eleven twelve
+4918 fourteen twelve
+4919 thirteen twelve
+4922 fourteen twelve
+4927 thirteen twelve
+4928 fourteen twelve
+4930 thirteen twelve
+4934 thirteen twelve
+4935 thirteen twelve
+4940 fourteen twelve
+4945 fifteen twelve
+4949 nine twelve
+4951 eleven twelve
+4953 fourteen twelve
+4954 ten twelve
+4957 thirteen twelve
+4959 thirteen twelve
+4960 nine twelve
+4961 thirteen twelve
+4963 ten twelve
+4964 fifteen twelve
+4965 fifteen twelve
+4966 eleven twelve
+4967 fourteen twelve
+4972 thirteen twelve
+4974 nine twelve
+4975 fourteen twelve
+4976 nine twelve
+4977 nine twelve
+4978 ten twelve
+4979 fourteen twelve
+4986 thirteen twelve
+4987 eleven twelve
+4988 eleven twelve
+4992 nine twelve
+4997 fourteen twelve
+4998 fourteen twelve
+2925 2075 82925 2075
+total: 5000 Accuracy: 0.585 Macro F1: 0.4476356112791151 Micro F1: 0.585
+5008 fifteen twelve
+5011 fourteen twelve
+5015 draw twelve
+5017 eleven twelve
+5018 fifteen twelve
+5025 nine twelve
+5029 eleven twelve
+5030 thirteen twelve
+5031 thirteen twelve
+5032 thirteen twelve
+5034 thirteen twelve
+5036 fourteen twelve
+5040 fourteen twelve
+5041 fourteen twelve
+5043 thirteen twelve
+5045 thirteen twelve
+5049 fourteen twelve
+5050 thirteen twelve
+5051 fourteen twelve
+5052 draw twelve
+5053 fifteen twelve
+5054 thirteen twelve
+5055 thirteen twelve
+5056 thirteen twelve
+5058 thirteen twelve
+5059 thirteen twelve
+5062 fourteen twelve
+5064 thirteen twelve
+5065 ten twelve
+5069 thirteen twelve
+5070 ten twelve
+5072 fourteen twelve
+5075 fourteen twelve
+5080 fourteen twelve
+5083 thirteen twelve
+5087 thirteen twelve
+5097 ten twelve
+5098 eleven twelve
+5099 thirteen twelve
+2986 2114 84586 2114
+total: 5100 Accuracy: 0.5854901960784313 Macro F1: 0.4519696305708545 Micro F1: 0.5854901960784313
+5101 draw twelve
+5105 thirteen twelve
+5106 eleven twelve
+5107 thirteen twelve
+5111 thirteen twelve
+5112 fourteen twelve
+5113 fourteen twelve
+5114 fourteen twelve
+5124 eleven twelve
+5125 eleven twelve
+5130 thirteen twelve
+5140 nine twelve
+5142 thirteen twelve
+5143 thirteen twelve
+5144 thirteen twelve
+5150 eleven twelve
+5153 eleven twelve
+5154 eleven twelve
+5162 nine twelve
+5176 ten twelve
+5181 thirteen twelve
+5185 thirteen twelve
+5186 thirteen twelve
+5188 thirteen twelve
+5191 nine twelve
+5196 fourteen twelve
+5198 thirteen twelve
+5200 thirteen twelve
+3058 2142 86258 2142
+total: 5200 Accuracy: 0.588076923076923 Macro F1: 0.45583069455770997 Micro F1: 0.588076923076923
+5202 thirteen twelve
+5203 ten twelve
+5207 eleven twelve
+5208 thirteen twelve
+5211 fourteen twelve
+5212 thirteen twelve
+5214 fourteen twelve
+5216 thirteen twelve
+5220 fourteen twelve
+5221 thirteen twelve
+5222 thirteen twelve
+5232 eleven twelve
+5233 eleven twelve
+5234 fourteen twelve
+5239 fourteen twelve
+5244 thirteen twelve
+5246 fourteen twelve
+5253 fourteen twelve
+5256 eleven twelve
+5257 eleven twelve
+5260 ten twelve
+5261 ten twelve
+5262 ten twelve
+5263 ten twelve
+5265 eleven twelve
+5268 fourteen twelve
+5270 eleven twelve
+5271 fourteen twelve
+5273 eleven twelve
+5275 nine twelve
+5279 fourteen twelve
+5281 fourteen twelve
+5284 thirteen twelve
+5285 thirteen twelve
+5287 thirteen twelve
+5288 ten twelve
+5289 thirteen twelve
+5290 thirteen twelve
+5295 thirteen twelve
+5296 thirteen twelve
+5297 eleven twelve
+5300 thirteen twelve
+3116 2184 87916 2184
+total: 5300 Accuracy: 0.5879245283018868 Macro F1: 0.45705180074451035 Micro F1: 0.5879245283018868
+5301 thirteen twelve
+5303 thirteen twelve
+5305 eleven twelve
+5306 thirteen twelve
+5307 draw twelve
+5309 thirteen twelve
+5310 thirteen twelve
+5311 thirteen twelve
+5312 seven twelve
+5313 thirteen twelve
+5314 thirteen twelve
+5316 draw twelve
+5323 eleven twelve
+5324 thirteen twelve
+5325 eleven twelve
+5326 nine twelve
+5331 fourteen twelve
+5335 thirteen twelve
+5337 ten twelve
+5338 ten twelve
+5341 thirteen twelve
+5343 eleven twelve
+5345 ten twelve
+5346 thirteen twelve
+5349 eight twelve
+5351 eight twelve
+5356 thirteen twelve
+5357 ten twelve
+5359 thirteen twelve
+5360 thirteen twelve
+5361 thirteen twelve
+5362 thirteen twelve
+5364 thirteen twelve
+5368 thirteen twelve
+5369 thirteen twelve
+5370 nine twelve
+5371 thirteen twelve
+5372 thirteen twelve
+5373 thirteen twelve
+5374 thirteen twelve
+5377 thirteen twelve
+5378 nine twelve
+5380 thirteen twelve
+5381 thirteen twelve
+5382 nine twelve
+5383 thirteen twelve
+5384 thirteen twelve
+5385 thirteen twelve
+5386 thirteen twelve
+5387 thirteen twelve
+5390 ten twelve
+3165 2235 89565 2235
+total: 5400 Accuracy: 0.5861111111111111 Macro F1: 0.45681875071056344 Micro F1: 0.5861111111111111
+5404 eleven twelve
+5405 ten twelve
+5409 eleven twelve
+5411 eleven twelve
+5419 nine twelve
+5424 thirteen twelve
+5435 thirteen twelve
+5436 eleven twelve
+5439 eleven twelve
+5440 eleven twelve
+5457 eleven twelve
+5459 eleven twelve
+5460 eleven twelve
+5461 eleven twelve
+5463 thirteen twelve
+5464 thirteen twelve
+5465 eleven twelve
+5466 eleven twelve
+5467 thirteen twelve
+5468 eleven twelve
+5472 eleven twelve
+5476 eleven twelve
+5477 eleven twelve
+5478 thirteen twelve
+5479 thirteen twelve
+5486 ten twelve
+5487 draw twelve
+5489 ten twelve
+5492 ten twelve
+5500 thirteen twelve
+3235 2265 91235 2265
+total: 5500 Accuracy: 0.5881818181818181 Macro F1: 0.45809050938253815 Micro F1: 0.5881818181818181
+5504 ten twelve
+5506 thirteen twelve
+5508 ten twelve
+5516 eleven twelve
+5521 thirteen twelve
+5522 ten twelve
+5524 thirteen twelve
+5525 thirteen twelve
+5526 thirteen twelve
+5541 thirteen twelve
+5543 thirteen twelve
+5544 thirteen twelve
+5545 thirteen twelve
+5549 thirteen twelve
+5550 thirteen twelve
+5551 eleven twelve
+5553 eleven twelve
+5554 eleven twelve
+5555 eleven twelve
+5556 draw twelve
+5557 eleven twelve
+5565 twelve two
+5566 ten two
+5569 nine two
+5570 seven two
+5571 ten two
+5580 twelve two
+5581 one two
+5582 ten two
+5584 five two
+5598 seven two
+5599 eight two
+5600 one two
+3302 2298 92902 2298
+total: 5600 Accuracy: 0.5896428571428571 Macro F1: 0.4928055778902522 Micro F1: 0.5896428571428571
+5605 eight two
+5606 eight two
+5607 seven zero
+5608 twelve zero
+5609 seven zero
+5610 twelve zero
+5611 seven zero
+3306 2305 93082 2305
+total: 5611 Accuracy: 0.5891997861343788 Macro F1: 0.4931711695026198 Micro F1: 0.5891997861343788
