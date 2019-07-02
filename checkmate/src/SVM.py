@@ -6,7 +6,7 @@ import copy
 import time
 
 
-file = open('SVM.out', 'w')
+file = open('../result/SVM.out', 'w')
 
 
 class VData(object):

@@ -26,19 +26,12 @@ class Data(object):
             else:
                 self.C[self.Y[i]] = set()
 
-    def writeback(self, mark, cluster):
-        writer = csv.writer(open('KMeans_PCA.csv', 'w', newline=''))
-        line = []
-        for i in range(len(cluster)):
-            line.append(str(i) + 'class')
-            line.append(len(cluster))
-        writer.writerow(line)
+    def writeback(self, mark, k):
+        writer = csv.writer(open('../result/KMeans_PCA.csv', 'w', newline=''))
 
+        writer.writerow([k])
         for i in range(self.data_size):
-            tmp = list(self.X[i])
-            tmp.append(self.Y[i])
-            tmp.append(mark[i])
-            writer.writerow(tmp)
+            writer.writerow([mark[i]])
 
     def PCA(self, threshold):
 
@@ -131,7 +124,7 @@ class Statistic(object):
 
         plt.xlabel('x')
         plt.ylabel('y')
-        plt.savefig('PCA graph.png')
+        plt.savefig('../result/PCA graph2.png')
         plt.show()
 
 
@@ -196,7 +189,7 @@ def kmeans(k, data, test):
 
     # 写回结果
     if not test:
-        data.writeback(mark, cluster)
+        data.writeback(mark, k)
 
     # 可视化
     if not test:
@@ -214,7 +207,7 @@ if __name__ == '__main__':
     for k in range(1, 10):
         print(k)
         data = Data()
-        data.PCA(0.5)
+        data.PCA(0.9)
         purity, RI = kmeans(k, data, True)
         if RI > best[1]:
             best = [purity, RI]
@@ -222,9 +215,10 @@ if __name__ == '__main__':
 
     # 最后验证 输出 可视化
     data = Data()
-    data.PCA(0.5)
+    data.PCA(0.9)
     kmeans(best_k, data, False)
-    print('best k =', best_k, 'purity:', best[0], '  RI:', best[1])
+    file = open('../result/KMeans_PCA.out', 'a')
+    print('best k =', best_k, 'purity:', best[0], '  RI:', best[1], file=file)
     print('finished train in', time.perf_counter() - start, 's')
 
 

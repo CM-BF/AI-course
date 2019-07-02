@@ -27,19 +27,12 @@ class Data(object):
             else:
                 self.C[self.Y[i]] = set()
 
-    def writeback(self, mark, cluster):
-        writer = csv.writer(open('KMeans.csv', 'w', newline=''))
-        line = []
-        for i in range(len(cluster)):
-            line.append(str(i) + 'class')
-            line.append(len(cluster))
-        writer.writerow(line)
+    def writeback(self, mark, k):
+        writer = csv.writer(open('../result/KMeans.csv', 'w', newline=''))
 
+        writer.writerow([k])
         for i in range(self.data_size):
-            tmp = self.X[i]
-            tmp.append(self.Y[i])
-            tmp.append(mark[i])
-            writer.writerow(tmp)
+            writer.writerow([mark[i]])
 
 
 class Statistic(object):
@@ -138,7 +131,7 @@ def kmeans(k, data, wb):
 
     # 写回结果
     if wb:
-        data.writeback(mark, cluster)
+        data.writeback(mark, k)
     return (purity, RI)
 
 
@@ -158,7 +151,8 @@ if __name__ == '__main__':
             best_k = k
     data = Data()
     kmeans(best_k, data, True)
-    print('best k =', best_k, 'purity:', best[0], '  RI:', best[1])
+    file = open('../result/KMeans.out', 'w')
+    print('best k =', best_k, 'purity:', best[0], '  RI:', best[1], file=file)
     print('finished train in', time.perf_counter() - start, 's')
 
 

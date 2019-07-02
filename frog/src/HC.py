@@ -15,7 +15,7 @@ class Data(object):
         next(self.data)
         count = 0
         for item in self.data:
-            if count % 7 == 0:
+            if count % 1 == 0:
                 self.X.append(item[:-1])
                 self.Y.append(item[-1])
             count += 1
@@ -29,19 +29,12 @@ class Data(object):
             else:
                 self.C[self.Y[i]] = set()
 
-    def writeback(self, mark, cluster):
-        writer = csv.writer(open('KMeans_PCA.csv', 'w', newline=''))
-        line = []
-        for i in range(len(cluster)):
-            line.append(str(i) + 'class')
-            line.append(len(cluster))
-        writer.writerow(line)
+    def writeback(self, mark, k):
+        writer = csv.writer(open('../result/HC.csv', 'w', newline=''))
 
+        writer.writerow([k])
         for i in range(self.data_size):
-            tmp = list(self.X[i])
-            tmp.append(self.Y[i])
-            tmp.append(mark[i])
-            writer.writerow(tmp)
+            writer.writerow([mark[i]])
 
     def PCA(self, threshold):
 
@@ -134,7 +127,7 @@ class Statistic(object):
 
         plt.xlabel('x')
         plt.ylabel('y')
-        plt.savefig('HC graph.png')
+        plt.savefig('../result/HC graph.png')
         plt.show()
 
 
@@ -156,6 +149,7 @@ def HC(k, data):
 
     # 开始聚类
     while q > k:
+        print(q)
         nearest = np.argmin(M)
         nearest_x, nearest_y = nearest // q, nearest % q
 
@@ -185,8 +179,11 @@ def HC(k, data):
     for i in range(k):
         for index in cluster[i]:
             mark[index] = i
+
+    data.writeback(mark, k)
     purity = comm.purity(k, cluster, data)
     RI = comm.RI(data, mark)
+
     comm.visualize(data, cluster)
 
     return (purity, RI)
@@ -201,8 +198,9 @@ if __name__ == '__main__':
     start = time.perf_counter()
     data = Data()
     data.PCA(0.5)
-    purity, RI = HC(8, data)
-    print('purity:', purity, '  RI:', RI)
+    purity, RI = HC(4, data)
+    file = open('../result/HC.out', 'w')
+    print('purity:', purity, '  RI:', RI, file=file)
     print('finished train in', time.perf_counter() - start, 's')
 
 

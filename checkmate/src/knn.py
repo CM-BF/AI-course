@@ -3,7 +3,7 @@ import numpy as np
 import time
 import copy
 
-file = open('knn.out', 'w')
+file = open('../result/knn.out', 'w')
 class VData(object):
 
     def __init__(self, k):
