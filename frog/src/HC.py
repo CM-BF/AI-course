@@ -13,9 +13,12 @@ class Data(object):
         self.X = []
         self.Y = []
         next(self.data)
+        count = 0
         for item in self.data:
-            self.X.append(item[:-1])
-            self.Y.append(item[-1])
+            if count % 7 == 0:
+                self.X.append(item[:-1])
+                self.Y.append(item[-1])
+            count += 1
         self.data_size = len(self.Y)
         self.dimension = len(self.X[0])
 
@@ -26,8 +29,13 @@ class Data(object):
             else:
                 self.C[self.Y[i]] = set()
 
-    def writeback(self, mark):
-        writer = csv.writer(open('PCA.csv', 'w', newline=''))
+    def writeback(self, mark, cluster):
+        writer = csv.writer(open('KMeans_PCA.csv', 'w', newline=''))
+        line = []
+        for i in range(len(cluster)):
+            line.append(str(i) + 'class')
+            line.append(len(cluster))
+        writer.writerow(line)
 
         for i in range(self.data_size):
             tmp = list(self.X[i])
@@ -126,77 +134,64 @@ class Statistic(object):
 
         plt.xlabel('x')
         plt.ylabel('y')
-        plt.savefig('PCA graph.png')
+        plt.savefig('HC graph.png')
         plt.show()
 
 
+def HC(k, data):
 
-def kmeans(k, data, test):
+    # 初始化：把每个点设为一个类
+    cluster = [{i} for i in range(data.data_size)]
+    cluster_calculate = np.array([[data.X[i]] for i in range(data.data_size)]).astype(np.float)
+    cluster_center = np.mean(cluster_calculate, axis=1)
+    cluster_center_weight = np.ones(data.data_size)
 
-    # 随机选取 k 个样本作为初始均值向量
-    rand = set()
-    while len(rand) != k:
-        rand = set()
-        for i in range(k):
-            rand.add(random.randint(0, data.data_size))
+    Cl = cluster_center[np.newaxis, :].repeat(data.data_size, axis=0)
+    Cr = cluster_center[:, np.newaxis].repeat(data.data_size, axis=1)
 
-    ave_vec = np.zeros((k, data.dimension))
-    for i in range(k):
-        ave_vec[i] = np.array(data.X[i])
+    M = np.sqrt(np.sum(np.square(Cl - Cr), axis=2)) + np.identity(data.data_size) * 100
 
-    # 测试
-    # print(ave_vec)
+    # 设置当前聚类簇数
+    q = data.data_size
 
-    # repeat 迭代开始
-    cluster = [set() for i in range(k)]
-    mark = np.zeros((data.data_size, ))
-    judge_ave_vec_update = True
-    while judge_ave_vec_update:
-        judge_ave_vec_update = False
+    # 开始聚类
+    while q > k:
+        nearest = np.argmin(M)
+        nearest_x, nearest_y = nearest // q, nearest % q
 
-        cluster = [set() for i in range(k)]
-        cluster_calculate = [[] for i in range(k)]
-        x = np.zeros((data.data_size, k, data.dimension))
-        u = np.zeros((data.data_size, k, data.dimension))
-        for i in range(data.data_size):
-            x[i, :] = data.X[i]
-        for i in range(k):
-            u[:, i] = ave_vec[i]
+        # 合并簇的中心，合并簇，删除对应矩阵行列
+        cluster_center[nearest_x] = (cluster_center[nearest_x] * cluster_center_weight[nearest_x]
+                                    + cluster_center[nearest_y] * cluster_center_weight[nearest_y]) / \
+                                    (cluster_center_weight[nearest_x] + cluster_center_weight[nearest_y])
+        cluster_center = np.delete(cluster_center, nearest_y, axis=0)
+        cluster_center_weight[nearest_x] = cluster_center_weight[nearest_x] + cluster_center_weight[nearest_y]
+        cluster_center_weight = np.delete(cluster_center_weight, nearest_y, axis=0)
+        cluster[nearest_x] = cluster[nearest_x] | cluster[nearest_y]
+        cluster.pop(nearest_y)
+        M = np.delete(M, nearest_y, axis=0)
+        M = np.delete(M, nearest_y, axis=1)
 
-        # 计算距离
-        d = np.array(np.sqrt(np.sum(np.square(x - u), axis=2)))
+        # 更新和nearest_x 相关簇的距离
+        tmpM = np.sqrt(np.sum(np.square(cluster_center - cluster_center[nearest_x]), axis=1))
+        tmpM[nearest_x] = 100
+        M[:, nearest_x] = tmpM
+        M[nearest_x] = tmpM
 
-        # 计算标记 shape(data.data_size, )
-        mark = np.argmin(d, axis=1)
-
-        # 划入相应的cluster
-        for i in range(data.data_size):
-            cluster_calculate[mark[i]].append(data.X[i])
-            cluster[mark[i]].add(i)
-
-        # 计算新的均值向量，并且更新
-        new_ave_vec = np.zeros(shape=ave_vec.shape)
-        for i in range(k):
-            new_ave_vec[i] = np.sum(np.array(cluster_calculate[i]).astype(np.float), axis=0) / len(cluster_calculate[i])
-
-        if not np.array_equal(new_ave_vec, ave_vec):
-            ave_vec = new_ave_vec
-            judge_ave_vec_update = True
-    # end repeat
+        q -= 1
 
     comm = Statistic()
+    # 计算 mark
+    mark = np.zeros(data.data_size).astype(np.int)
+    for i in range(k):
+        for index in cluster[i]:
+            mark[index] = i
     purity = comm.purity(k, cluster, data)
-    # print('finished purity')
     RI = comm.RI(data, mark)
+    comm.visualize(data, cluster)
 
-    # 写回结果
-    if not test:
-        data.writeback(mark)
-
-    # 可视化
-    if not test:
-        comm.visualize(data, cluster)
     return (purity, RI)
+
+
 
 
 if __name__ == '__main__':
@@ -204,22 +199,10 @@ if __name__ == '__main__':
     # 运行kmeans
     print('begin train')
     start = time.perf_counter()
-    best = [0, 0]
-    best_k = 0
-    for k in range(1, 10):
-        print(k)
-        data = Data()
-        data.PCA(0.5)
-        purity, RI = kmeans(k, data, True)
-        if RI > best[1]:
-            best = [purity, RI]
-            best_k = k
-
-    # 最后验证 输出 可视化
     data = Data()
     data.PCA(0.5)
-    kmeans(best_k, data, False)
-    print('best k =', best_k, 'purity:', best[0], '  RI:', best[1])
+    purity, RI = HC(8, data)
+    print('purity:', purity, '  RI:', RI)
     print('finished train in', time.perf_counter() - start, 's')
 
 
